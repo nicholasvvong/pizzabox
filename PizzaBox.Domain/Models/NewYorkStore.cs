@@ -2,9 +2,9 @@ using PizzaBox.Domain.Abstracts;
 
 namespace PizzaBox.Domain.Models
 {
-    public class NewYorkPizza : AStore
+    public class NewYorkStore : AStore
     {
-        public NewYorkPizza()
+        public NewYorkStore()
         {
             Name = "NY Pizza";
         }

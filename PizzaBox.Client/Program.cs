@@ -12,9 +12,9 @@ namespace PizzaBox.Client
 
         public static void PlayWithStore()
         {
-            var storeSingleton = new StoreSingleton();
+            //var storeSingleton = StoreSingleton.Instance;
 
-            foreach(var s in storeSingleton.Stores)
+            foreach(var s in StoreSingleton.Instance.Stores)
             {
                 Console.WriteLine(s);
             }
