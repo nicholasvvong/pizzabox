@@ -7,21 +7,21 @@ namespace PizzaBox.Domain.Models
     {
         protected override void AddCrust()
         {
-            Crust = new Crust();
+            Crust = new Crust("medium", 3);
         }
 
         protected override void AddSize()
         {
-            Size = new Size();
+            Size = new Size("medium", 3);
         }
 
         protected override void AddToppings()
         {
             Toppings = new List<Topping>
             {
-                new Topping(),
-                new Topping(),
-                new Topping()
+                new Topping("Pepporino", 5),
+                new Topping("Pineapple", 3),
+                new Topping("Mushroom", 2)
             };
         }
     }
