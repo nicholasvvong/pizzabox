@@ -1,18 +1,23 @@
 using System;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using PizzaBox.Domain.Models;
 
 namespace PizzaBox.Domain.Abstracts
 {
+    [XmlInclude(typeof(CaliforniaStore))]
+    [XmlInclude(typeof(FreddyStore))]
+    [XmlInclude(typeof(ChicagoStore))]
+    [XmlInclude(typeof(NewYorkStore))]
     public class AStore
     {
-        public string Name{ get;  protected set; } //Property
+        public string Name{ get; set; } //Property
 
-        public List<Order> Orders { get; protected set; }
+        public List<Order> Orders { get; set; }
 
-        public List<APizzaComponent> ToppingsList { get; protected set; }
-        public List<APizzaComponent> SizeList { get; protected set; }
-        public List<APizzaComponent> CrustList { get; protected set; }
+        public List<Topping> ToppingsList { get; set; }
+        public List<Size> SizeList { get; set; }
+        public List<Crust> CrustList { get; set; }
 
         protected AStore()
         {
@@ -43,6 +48,10 @@ namespace PizzaBox.Domain.Abstracts
         protected virtual void AddCrust(string type, decimal price)
         {
             CrustList.Add(new Crust(type, price));
+        }
+        public virtual void AddOrder(Order o)
+        {
+            Orders.Add(o);
         }
 
         protected virtual void InitToppings(){}

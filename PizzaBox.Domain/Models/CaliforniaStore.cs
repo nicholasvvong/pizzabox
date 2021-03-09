@@ -5,15 +5,18 @@ namespace PizzaBox.Domain.Models
 {
     public class CaliforniaStore : AStore
     {
+        protected List<APizza> _presetPizza { get; set; }
         public CaliforniaStore()
         {
             Name = "CPK";
-            ToppingsList = new List<APizzaComponent>();
-            SizeList = new List<APizzaComponent>();
-            CrustList = new List<APizzaComponent>();
+            _presetPizza = new List<APizza>();
+            ToppingsList = new List<Topping>();
+            SizeList = new List<Size>();
+            CrustList = new List<Crust>();
             InitToppings();
             InitSize();
             InitCrust();
+            InitPresetPizza();
         }
 
         protected override void InitToppings()
@@ -41,6 +44,27 @@ namespace PizzaBox.Domain.Models
             AddCrust("regular", 1.0m);
             AddCrust("hand-tossed", 1.5m);
             AddCrust("thin", 1.0m);
+        }
+        
+        protected void InitPresetPizza()
+        {
+            CustomPizza tempP = new CustomPizza();
+            tempP.type = "meat";
+            tempP.AddCrust(CrustList[0]);
+            tempP.AddSize(SizeList[0]);
+            tempP.AddTopping(ToppingsList[0]);
+            tempP.AddTopping(ToppingsList[1]);
+            tempP.AddTopping(ToppingsList[2]);
+            tempP.AddTopping(ToppingsList[6]);
+            tempP.AddTopping(ToppingsList[8]);
+            /*
+                _presetMeat = new List<string>{
+                "pepperoni",
+                "ham",
+                "sauage",
+                "salami"
+            };
+            */
         }
     }
 }

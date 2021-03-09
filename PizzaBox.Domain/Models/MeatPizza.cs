@@ -5,24 +5,57 @@ namespace PizzaBox.Domain.Models
 {
     public class MeatPizza : APizza
     {
-        protected override void AddCrust()
+        protected List<string> _presetToppings;
+
+        public MeatPizza()
         {
-            Crust = new Crust("large", 3);
+            _presetToppings = new List<string>{
+                "pepperoni",
+                "ham",
+                "sauage",
+                "salami"
+            };
         }
 
-        protected override void AddSize()
+        public MeatPizza(List<string> toppings)
         {
-            Size = new Size("large", 3);
+
         }
 
-        protected override void AddToppings()
+        public override void AddCrust(Crust c)
+        {
+            Crust = c;
+        }
+
+        public override void AddSize(Size s)
+        {
+            Size = s;
+        }
+
+        public override void AddTopping(Topping t)
         {
             Toppings = new List<Topping>
             {
                 new Topping("Pepporino", 5),
-                new Topping("Pineapple", 3),
-                new Topping("Mushroom", 2)
+                new Topping("Ham", 3),
+                new Topping("Sausage", 2),
+                new Topping("Salami", 3)
             };
+        }
+
+        public void AddToppings(AStore store)
+        {
+            foreach(string s in _presetToppings)
+            {
+                foreach(Topping t in store.ToppingsList)
+                {
+                    if(t.Name == s)
+                    {
+                        Toppings.Add(t);
+                        break;
+                    }
+                }
+            }
         }
     }
 }

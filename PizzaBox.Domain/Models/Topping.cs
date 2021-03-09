@@ -2,6 +2,10 @@ namespace PizzaBox.Domain.Abstracts
 {
     public class Topping : APizzaComponent
     {
+        private Topping()
+        {
+            
+        }
         public Topping(string type, decimal p) : base(type, p)
         {
 

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAStore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <AStore xsi:type="CaliforniaStore">
+    <Name>CPK</Name>
+    <ToppingsList>
+      <APizzaComponent xsi:type="Topping">
+        <Name>beef</Name>
+        <Price>0.66</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>chicken</Name>
+        <Price>1.0</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>ham</Name>
+        <Price>0.75</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>mushroom</Name>
+        <Price>0.50</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>olive</Name>
+        <Price>0.33</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>peppers</Name>
+        <Price>0.40</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>pepporoni</Name>
+        <Price>0.75</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>pineapple</Name>
+        <Price>0.50</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>salami</Name>
+        <Price>0.70</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>sausage</Name>
+        <Price>0.80</Price>
+      </APizzaComponent>
+    </ToppingsList>
+    <SizeList>
+      <APizzaComponent xsi:type="Size">
+        <Name>small</Name>
+        <Price>3.0</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Size">
+        <Name>medium</Name>
+        <Price>4.0</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Size">
+        <Name>large</Name>
+        <Price>5.0</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Size">
+        <Name>extra large</Name>
+        <Price>6.0</Price>
+      </APizzaComponent>
+    </SizeList>
+    <CrustList>
+      <APizzaComponent xsi:type="Crust">
+        <Name>regular</Name>
+        <Price>1.0</Price>
+        <CheeseStuffed>false</CheeseStuffed>
+        <StuffedPrice>1.50</StuffedPrice>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Crust">
+        <Name>hand-tossed</Name>
+        <Price>1.5</Price>
+        <CheeseStuffed>false</CheeseStuffed>
+        <StuffedPrice>1.50</StuffedPrice>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Crust">
+        <Name>thin</Name>
+        <Price>1.0</Price>
+        <CheeseStuffed>false</CheeseStuffed>
+        <StuffedPrice>1.50</StuffedPrice>
+      </APizzaComponent>
+    </CrustList>
+  </AStore>
+  <AStore xsi:type="ChicagoStore">
+    <Name>Chicago Pizza Store</Name>
+    <ToppingsList>
+      <APizzaComponent xsi:type="Topping">
+        <Name>beef</Name>
+        <Price>0.66</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>chicken</Name>
+        <Price>1.0</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>ham</Name>
+        <Price>0.75</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>mushroom</Name>
+        <Price>0.50</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>olive</Name>
+        <Price>0.33</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>peppers</Name>
+        <Price>0.40</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>pepporoni</Name>
+        <Price>0.75</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>pineapple</Name>
+        <Price>0.50</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>salami</Name>
+        <Price>0.70</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>sausage</Name>
+        <Price>0.80</Price>
+      </APizzaComponent>
+    </ToppingsList>
+    <SizeList>
+      <APizzaComponent xsi:type="Size">
+        <Name>small</Name>
+        <Price>3.0</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Size">
+        <Name>medium</Name>
+        <Price>4.0</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Size">
+        <Name>large</Name>
+        <Price>5.0</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Size">
+        <Name>extra large</Name>
+        <Price>6.0</Price>
+      </APizzaComponent>
+    </SizeList>
+    <CrustList>
+      <APizzaComponent xsi:type="Crust">
+        <Name>regular</Name>
+        <Price>1.0</Price>
+        <CheeseStuffed>false</CheeseStuffed>
+        <StuffedPrice>1.50</StuffedPrice>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Crust">
+        <Name>hand-tossed</Name>
+        <Price>1.5</Price>
+        <CheeseStuffed>false</CheeseStuffed>
+        <StuffedPrice>1.50</StuffedPrice>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Crust">
+        <Name>thin</Name>
+        <Price>1.0</Price>
+        <CheeseStuffed>false</CheeseStuffed>
+        <StuffedPrice>1.50</StuffedPrice>
+      </APizzaComponent>
+    </CrustList>
+  </AStore>
+  <AStore xsi:type="FreddyStore">
+    <Name>Freddy's Pizza Store</Name>
+    <ToppingsList>
+      <APizzaComponent xsi:type="Topping">
+        <Name>beef</Name>
+        <Price>0.66</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>chicken</Name>
+        <Price>1.0</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>ham</Name>
+        <Price>0.75</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>mushroom</Name>
+        <Price>0.50</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>olive</Name>
+        <Price>0.33</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>peppers</Name>
+        <Price>0.40</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>pepporoni</Name>
+        <Price>0.75</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>pineapple</Name>
+        <Price>0.50</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>salami</Name>
+        <Price>0.70</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>sausage</Name>
+        <Price>0.80</Price>
+      </APizzaComponent>
+    </ToppingsList>
+    <SizeList>
+      <APizzaComponent xsi:type="Size">
+        <Name>small</Name>
+        <Price>3.0</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Size">
+        <Name>medium</Name>
+        <Price>4.0</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Size">
+        <Name>large</Name>
+        <Price>5.0</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Size">
+        <Name>extra large</Name>
+        <Price>6.0</Price>
+      </APizzaComponent>
+    </SizeList>
+    <CrustList>
+      <APizzaComponent xsi:type="Crust">
+        <Name>regular</Name>
+        <Price>1.0</Price>
+        <CheeseStuffed>false</CheeseStuffed>
+        <StuffedPrice>1.50</StuffedPrice>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Crust">
+        <Name>hand-tossed</Name>
+        <Price>1.5</Price>
+        <CheeseStuffed>false</CheeseStuffed>
+        <StuffedPrice>1.50</StuffedPrice>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Crust">
+        <Name>thin</Name>
+        <Price>1.0</Price>
+        <CheeseStuffed>false</CheeseStuffed>
+        <StuffedPrice>1.50</StuffedPrice>
+      </APizzaComponent>
+    </CrustList>
+  </AStore>
+  <AStore xsi:type="NewYorkStore">
+    <Name>NewYork Pizza Store</Name>
+    <ToppingsList>
+      <APizzaComponent xsi:type="Topping">
+        <Name>beef</Name>
+        <Price>0.66</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>chicken</Name>
+        <Price>1.0</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>ham</Name>
+        <Price>0.75</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>mushroom</Name>
+        <Price>0.50</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>olive</Name>
+        <Price>0.33</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>peppers</Name>
+        <Price>0.40</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>pepporoni</Name>
+        <Price>0.75</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>pineapple</Name>
+        <Price>0.50</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>salami</Name>
+        <Price>0.70</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Topping">
+        <Name>sausage</Name>
+        <Price>0.80</Price>
+      </APizzaComponent>
+    </ToppingsList>
+    <SizeList>
+      <APizzaComponent xsi:type="Size">
+        <Name>small</Name>
+        <Price>3.0</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Size">
+        <Name>medium</Name>
+        <Price>4.0</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Size">
+        <Name>large</Name>
+        <Price>5.0</Price>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Size">
+        <Name>extra large</Name>
+        <Price>6.0</Price>
+      </APizzaComponent>
+    </SizeList>
+    <CrustList>
+      <APizzaComponent xsi:type="Crust">
+        <Name>regular</Name>
+        <Price>1.0</Price>
+        <CheeseStuffed>false</CheeseStuffed>
+        <StuffedPrice>1.50</StuffedPrice>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Crust">
+        <Name>hand-tossed</Name>
+        <Price>1.5</Price>
+        <CheeseStuffed>false</CheeseStuffed>
+        <StuffedPrice>1.50</StuffedPrice>
+      </APizzaComponent>
+      <APizzaComponent xsi:type="Crust">
+        <Name>thin</Name>
+        <Price>1.0</Price>
+        <CheeseStuffed>false</CheeseStuffed>
+        <StuffedPrice>1.50</StuffedPrice>
+      </APizzaComponent>
+    </CrustList>
+  </AStore>
+</ArrayOfAStore>

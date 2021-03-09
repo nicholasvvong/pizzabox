@@ -6,9 +6,9 @@ namespace PizzaBox.Domain.Models
 {
     public class Order
     {
-        public int MaxPrice { get; protected set; }
-        public int MaxPizzas { get; protected set; }
-        public int CurTotal { get; private set; }
+        public int MaxPrice { get; set; }
+        public int MaxPizzas { get; set; }
+        public decimal CurTotal { get; set; }
         public List<APizza> Pizzas { get; set; }
 
         public Order()
@@ -34,7 +34,7 @@ namespace PizzaBox.Domain.Models
             Pizzas.Add(pizza);
             CurTotal += pizza.CalculatePrice();
         }
-
+        
         public void DeletePizza(int index)
         {
             CurTotal -= Pizzas[index].CalculatePrice();

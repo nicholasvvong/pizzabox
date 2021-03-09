@@ -2,6 +2,10 @@ namespace PizzaBox.Domain.Abstracts
 {
     public class Size : APizzaComponent
     {
+        protected Size()
+        {
+            
+        }
         public Size(string type, decimal p) : base(type, p)
         {
             

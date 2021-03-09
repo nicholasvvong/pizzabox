@@ -5,6 +5,11 @@ namespace PizzaBox.Domain.Abstracts
         public string Name { get; set; }
         public decimal Price { get; set; }
 
+        protected APizzaComponent()
+        {
+
+        }
+
         public APizzaComponent(string type, decimal p)
         {
             FactoryMethod(type, p);

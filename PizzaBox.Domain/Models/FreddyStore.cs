@@ -8,9 +8,9 @@ namespace PizzaBox.Domain.Models
         public FreddyStore()
         {
             Name = "Freddy's Pizza Store";
-            ToppingsList = new List<APizzaComponent>();
-            SizeList = new List<APizzaComponent>();
-            CrustList = new List<APizzaComponent>();
+            ToppingsList = new List<Topping>();
+            SizeList = new List<Size>();
+            CrustList = new List<Crust>();
             InitToppings();
             InitSize();
             InitCrust();

@@ -25,11 +25,20 @@ namespace PizzaBox.Domain.Singletons
         private StoreSingleton()
         {
             var fs = new FileStorage();
-
+            
             if(Stores == null)
             {
                 Stores = fs.ReadFromXml<AStore>() as List<AStore>;
             }
+            
+            /*
+            Stores = new List<AStore>();
+            Stores.Add(new CaliforniaStore());
+            Stores.Add(new ChicagoStore());
+            Stores.Add(new FreddyStore());
+            Stores.Add(new NewYorkStore());
+            fs.WriteToXml<AStore>(Stores);
+            */
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using PizzaBox.Domain.Abstracts;
 
@@ -5,24 +6,31 @@ namespace PizzaBox.Domain.Models
 {
     public class CustomPizza : APizza
     {
-        protected override void AddCrust()
+        public CustomPizza() : base()
+        {
+            type = "custom";
+        }
+        public override void AddCrust(Crust c)
         {
             Crust = new Crust("medium", 3);
         }
 
-        protected override void AddSize()
+        public override void AddSize(Size s)
         {
             Size = new Size("medium", 3);
         }
 
-        protected override void AddToppings()
+        public override void AddTopping(Topping t)
         {
-            Toppings = new List<Topping>
+            if(Toppings.Count >= _maxtoppings)
             {
-                new Topping("Pepporino", 5),
-                new Topping("Pineapple", 3),
-                new Topping("Mushroom", 2)
-            };
+                Console.WriteLine("Max Amount of Toppings reached. ({0})", _maxtoppings);
+                return;
+            }
+            else
+            {
+                Toppings.Add(t);
+            }
         }
     }
 }
