@@ -8,7 +8,7 @@ namespace PizzaBox.Domain.Models
     {
         public CustomPizza() : base()
         {
-            type = "custom";
+            type = "Custom Pizza";
         }
         public override void AddCrust(Crust c)
         {
@@ -22,9 +22,9 @@ namespace PizzaBox.Domain.Models
 
         public override void AddTopping(Topping t)
         {
-            if(Toppings.Count >= _maxtoppings)
+            if(Toppings.Count > _maxtoppings)
             {
-                Console.WriteLine("Max Amount of Toppings reached. ({0})", _maxtoppings);
+                Console.WriteLine("Max Amount of Toppings reached ({0}). ", _maxtoppings);
                 return;
             }
             else

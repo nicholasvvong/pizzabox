@@ -6,24 +6,24 @@ using PizzaBox.Storing;
 
 namespace PizzaBox.Domain.Singletons
 {
-    public class StoreSingleton
+    public class CustomerSingleton
     {
-        private static StoreSingleton _storeSingleton;
+        private static CustomerSingleton _customerSingletone;
         public List<AStore> Stores { get; set; }
-        public static StoreSingleton Instance
+        public static CustomerSingleton Instance
         {
             get
             {
-                if(_storeSingleton == null)
+                if(_customerSingletone == null)
                 {
-                    _storeSingleton = new StoreSingleton();
+                    _customerSingletone = new CustomerSingleton();
                 }
 
-                return _storeSingleton;
+                return _customerSingletone;
             }
         }
 
-        private StoreSingleton()
+        private CustomerSingleton()
         {
             var fs = new FileStorage();
             

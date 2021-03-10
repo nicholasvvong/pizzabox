@@ -44,7 +44,7 @@ namespace PizzaBox.Domain.Models
             StartOrder();
         }
 
-        public void StartOrder()
+        private void StartOrder()
         {
             //if(CurrentOrder == null)
             CurrentOrder = new Order();

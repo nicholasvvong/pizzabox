@@ -14,7 +14,7 @@ namespace PizzaBox.Domain.Abstracts
         public string Name{ get; set; } //Property
 
         public List<Order> Orders { get; set; }
-
+        public List<APizza> PresetPizza { get; set; }
         public List<Topping> ToppingsList { get; set; }
         public List<Size> SizeList { get; set; }
         public List<Crust> CrustList { get; set; }

@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Xml.Serialization;
+using PizzaBox.Domain.Models;
 
 namespace PizzaBox.Domain.Abstracts
 {
@@ -7,12 +9,13 @@ namespace PizzaBox.Domain.Abstracts
     /// </summary>
     /// 
 
+    [XmlInclude(typeof(CustomPizza))]
     public abstract class APizza
     {
         public string type { get; set; }
         protected int _minToppings = 2;
         protected int _maxtoppings = 5;
-        public decimal PizzaPrice { get; protected set; }
+        public decimal PizzaPrice { get; set; }
         public List<Topping> Toppings { get; set; }
         public Crust Crust { get; set; }
         public Size Size{ get; set; }
@@ -25,6 +28,7 @@ namespace PizzaBox.Domain.Abstracts
         private void FactoryMethod()
         {
             PizzaPrice = 0;
+            Toppings = new List<Topping>();
             AddCrust(new Crust("",0m));
             AddSize(new Size("", 0m));
             AddTopping(new Topping("", 0m));
