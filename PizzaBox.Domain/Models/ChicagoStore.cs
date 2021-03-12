@@ -34,7 +34,6 @@ namespace PizzaBox.Domain.Models
             AddSize("small", 3.0m);
             AddSize("medium", 4.0m);
             AddSize("large", 5.0m);
-            AddSize("extra large", 6.0m);
         }
         protected override void InitCrust()
         {

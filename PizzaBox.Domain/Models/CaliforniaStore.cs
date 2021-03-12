@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using PizzaBox.Domain.Abstracts;
 
@@ -12,10 +13,12 @@ namespace PizzaBox.Domain.Models
             ToppingsList = new List<Topping>();
             SizeList = new List<Size>();
             CrustList = new List<Crust>();
+            /*
             InitToppings();
             InitSize();
-            InitCrust();
+            InitCrust();  
             InitPresetPizza();
+            */
         }
 
         protected override void InitToppings()
@@ -48,14 +51,14 @@ namespace PizzaBox.Domain.Models
         protected void InitPresetPizza()
         {
             CustomPizza tempP = new CustomPizza();
-            tempP.type = "Meat Pizza";
+            tempP.Type = "Meat Pizza";
             tempP.AddCrust(CrustList[0]);
-            tempP.AddSize(SizeList[0]);
             tempP.AddTopping(ToppingsList[0]);
             tempP.AddTopping(ToppingsList[1]);
             tempP.AddTopping(ToppingsList[2]);
             tempP.AddTopping(ToppingsList[6]);
             tempP.AddTopping(ToppingsList[8]);
+            tempP.CalculatePrice();
             PresetPizza.Add(tempP);
             /*
                 _presetMeat = new List<string>{

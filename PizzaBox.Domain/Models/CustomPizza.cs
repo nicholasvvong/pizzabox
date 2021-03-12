@@ -8,29 +8,32 @@ namespace PizzaBox.Domain.Models
     {
         public CustomPizza() : base()
         {
-            type = "Custom Pizza";
+            Type = "Custom Pizza";
         }
         public override void AddCrust(Crust c)
         {
-            Crust = new Crust("medium", 3);
+            Crust = c;
+            CalculatePrice();
         }
 
         public override void AddSize(Size s)
         {
-            Size = new Size("medium", 3);
+            Size = s;
+            CalculatePrice();
         }
 
         public override void AddTopping(Topping t)
         {
-            if(Toppings.Count > _maxtoppings)
+            if(Toppings.Count > MaxToppings + 1)
             {
-                Console.WriteLine("Max Amount of Toppings reached ({0}). ", _maxtoppings);
+                Console.WriteLine("Max Amount of Toppings reached ({0}). ", MaxToppings);
                 return;
             }
             else
             {
                 Toppings.Add(t);
             }
+            CalculatePrice();
         }
     }
 }

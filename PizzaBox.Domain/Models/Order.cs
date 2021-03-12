@@ -9,6 +9,7 @@ namespace PizzaBox.Domain.Models
         public int MaxPrice { get; set; }
         public int MaxPizzas { get; set; }
         public decimal CurTotal { get; set; }
+        public APizza CurrentPizza { get; set; }
         public List<APizza> Pizzas { get; set; }
 
         public Order()
@@ -34,6 +35,11 @@ namespace PizzaBox.Domain.Models
             Pizzas.Add(pizza);
             CurTotal += pizza.CalculatePrice();
         }
+
+        public void AddPresetPizza(APizza pizza)
+        {
+            AddPizza(pizza);
+        }
         
         public void DeletePizza(int index)
         {
@@ -50,6 +56,36 @@ namespace PizzaBox.Domain.Models
             }
 
             return orderList;
+        }
+
+        public void CreatePizza()
+        {
+            /*
+            if(!isPizzaStarted())
+            {
+                Console.WriteLine("Have not started a pizza yet. Start a pizza for this order first.");
+                return;
+            }
+            */
+            CurrentPizza = new CustomPizza();
+        }
+
+        public void FinishPizza()
+        {
+            AddPizza(CurrentPizza);
+            CurrentPizza = null;
+        }
+
+        private bool isPizzaStarted()
+        {
+            if(CurrentPizza == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

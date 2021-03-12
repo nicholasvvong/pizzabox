@@ -6,6 +6,8 @@ namespace PizzaBox.Domain.Models
 {
     public class Customer
     {
+        public string Name { get; set; }
+        public string password { get; set; }
         public int LastTimeOrdered { get; protected set; }
         public AStore LastStore { get; protected set; }
         public List<Order> OrderHistory { get; protected set; }
@@ -24,13 +26,21 @@ namespace PizzaBox.Domain.Models
 
         private bool CanChangeStore(AStore store)
         {
-            if(LastStore.Name == store.Name)
+            if(LastStore == null)
+            {
+                LastStore = store;
                 return true;
+            }
             else
-                return false;
+            {
+                if(LastStore.Name == store.Name)
+                    return false;
+                else
+                    return true;
+            }
         }
 
-        public void StartOrderCheck(AStore store)
+        private void StartOrderCheck(AStore store)
         {
             if(!CanOrder())
             {
@@ -41,26 +51,42 @@ namespace PizzaBox.Domain.Models
                 Console.WriteLine("Ordered from another store in last 24 hours. Can't order again.");
             }
             LastStore = store;
-            StartOrder();
         }
 
-        private void StartOrder()
+        public void StartOrder(AStore store)
         {
+            StartOrderCheck(store);
             //if(CurrentOrder == null)
             CurrentOrder = new Order();
             
-            bool finished = false;
-            //Get User Inputs
-            do{
-                CreatePizza(0);
-
-                if(!finished)
-                    finished = true;
-            }while(!finished);
-
-            PlaceOrder();
         }
 
+        public bool isOrderStarted()
+        {
+            if(CurrentOrder == null)
+                return false;
+            else
+                return true;
+        }
+
+        public void StartPizza()
+        {
+            if(!isOrderStarted())
+            {
+                Console.WriteLine("Order not started. Start an order first.");
+                return;
+            }
+
+            CurrentOrder.CreatePizza();
+        }
+
+        
+        public void StartPresetPizza(APizza pizza)
+        {
+            StartPizza();
+            CurrentOrder.CurrentPizza.CopyPizza(pizza);
+        }
+        
         protected void PlaceOrder()
         {
             LastStore.AddOrder(CurrentOrder);
@@ -98,7 +124,7 @@ namespace PizzaBox.Domain.Models
             CustomerGetSize(customPizza);
             CustomerGetCrust(customPizza);
             CustomerGetToppings(customPizza);
-            CurrentOrder.AddPizza(customPizza);
+            CurrentOrder.FinishPizza();
         }
         private void CustomerGetSize(APizza customPizza)
         {
@@ -124,7 +150,7 @@ namespace PizzaBox.Domain.Models
         }
         public void AddVeganPizza()
         {
-            CurrentOrder.AddPizza(new MeatPizza());
+            CurrentOrder.FinishPizza();
         }
     }
 }

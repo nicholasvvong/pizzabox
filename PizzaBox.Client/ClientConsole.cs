@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using PizzaBox.Domain.Abstracts;
+using PizzaBox.Domain.Models;
 
 namespace PizzaBox.Client
 {
@@ -8,10 +9,16 @@ namespace PizzaBox.Client
     {
         string userInput = "";
         int userIntInput = 0;
+        int maxMenuOptions = 2;
         public ClientConsole()
         {
 
         }
+
+
+        /*
+        -------------------------------------Print Methods----------------------------------------
+        */
 
         private void PrintInvalid()
         {
@@ -20,6 +27,7 @@ namespace PizzaBox.Client
 
         public void PrintStore(List<AStore> stores)
         {
+            PrintLine();
             for(int i = 0; i < stores.Count; i++)
             {
                 Console.WriteLine("#{0}: {1}", i+1, stores[i]);
@@ -28,18 +36,103 @@ namespace PizzaBox.Client
 
         public void PrintPizzaOptions(AStore curStore)
         {
-            foreach(APizza p in curStore.PresetPizza)
+            PrintLine();
+            for(int i = 0; i < curStore.PresetPizza.Count; i++)
             {
-                Console.WriteLine(p);
+                Console.WriteLine("{0}: {1}", i + 1, curStore.PresetPizza[i]);
             }
+
             Console.WriteLine("{0}: Custom Pizza", curStore.PresetPizza.Count + 1);
         }
 
-        public void PrintMenu(AStore curStore)
+        public void PrintPizzaOptionsNoSize(AStore curStore)
         {
+            PrintLine();
+            for(int i = 0; i < curStore.PresetPizza.Count; i++)
+            {
+                Console.WriteLine("{0}: {1}", i + 1, curStore.PresetPizza[i].PrintNoSize(true));
+            }
 
+            Console.WriteLine("{0}: Custom Pizza", curStore.PresetPizza.Count + 1);
         }
 
+        private void PrintLine()
+        {
+            Console.WriteLine("------------------------------------------------------");
+        }
+
+        public void PrintMenu()
+        {
+            maxMenuOptions = 2;
+            PrintLine();
+            Console.WriteLine("1. View Order History");
+            Console.WriteLine("2. Start New Order");
+        }
+
+        public void PrintOrderOptions()
+        {
+            maxMenuOptions = 4;
+            PrintLine();
+            Console.WriteLine("1. View Current Order");
+            Console.WriteLine("2. Add Another Pizza");
+            Console.WriteLine("3. Delete Pizza From Order");
+            Console.WriteLine("4. Finish Order");
+        }
+
+        public void PrintCurrentOrder(Customer c)
+        {
+            PrintLine();
+            foreach(APizza p in c.CurrentOrder.Pizzas)
+            {
+                Console.WriteLine(p);
+            }
+            Console.WriteLine("Current total: " + c.CurrentOrder.CurTotal);
+        }
+
+        public void PrintCompInfo(List<APizzaComponent> comp)
+        {
+            maxMenuOptions = comp.Count;
+            PrintLine();
+            for(int i = 0; i < comp.Count; i++)
+            {
+                Console.WriteLine("{0} : {1} - {2}", i + 1, comp[i].Name, comp[i].Price);
+            }
+        }
+
+        public void PrintSizes(AStore store)
+        {
+            maxMenuOptions = store.SizeList.Count;
+            PrintLine();
+            for(int i = 0; i < store.SizeList.Count; i++)
+            {
+                Console.WriteLine("{0} : {1} - {2}", i + 1, store.SizeList[i].Name, store.SizeList[i].Price);
+            }
+        }
+
+        public void PrintCrusts(AStore store)
+        {
+            maxMenuOptions = store.CrustList.Count;
+            PrintLine();
+            for(int i = 0; i < store.CrustList.Count; i++)
+            {
+                Console.WriteLine("{0} : {1} - {2}", i + 1, store.CrustList[i].Name, store.CrustList[i].Price);
+            }
+        }
+
+        public void PrintToppings(AStore store)
+        {
+            maxMenuOptions = store.ToppingsList.Count + 1;
+            PrintLine();
+            for(int i = 0; i < store.ToppingsList.Count; i++)
+            {
+                Console.WriteLine("{0} : {1} - {2}", i + 1, store.ToppingsList[i].Name, store.ToppingsList[i].Price);
+            }
+            Console.WriteLine("{0} : Finish", store.ToppingsList.Count + 1);
+        }
+
+        /*
+        -------------------------------------Chooose Methods----------------------------------------
+        */
         public AStore ChooseStore(List<AStore> stores)
         {
             PrintStore(stores);
@@ -53,6 +146,18 @@ namespace PizzaBox.Client
             PrintPizzaOptions(store);
         }
 
+        public int ChooseMenu()
+        {
+            Console.Write("Enter # for menu options: ");
+            GetValidInput(1, maxMenuOptions);
+            return userIntInput;
+        }
+
+
+
+        /*
+        -------------------------------------Input and Validation Methods----------------------------------------
+        */
         private void GetValidInput(int min, int max)
         {
             GetUserInput();

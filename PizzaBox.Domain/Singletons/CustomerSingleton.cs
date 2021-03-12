@@ -29,7 +29,7 @@ namespace PizzaBox.Domain.Singletons
             
             if(Stores == null)
             {
-                Stores = fs.ReadFromXml<AStore>().ToList();
+                //Stores = fs.ReadFromXml<AStore>().ToList();
             }
         }
 

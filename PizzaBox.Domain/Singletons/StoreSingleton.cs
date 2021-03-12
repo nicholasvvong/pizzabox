@@ -27,12 +27,16 @@ namespace PizzaBox.Domain.Singletons
         {
             var fs = new FileStorage();
             
+            //SeedStores();
+            
             if(Stores == null)
             {
                 Stores = fs.ReadFromXml<AStore>().ToList();
             }
+            
         }
 
+        
         private void SeedStores()
         {
             var fs = new FileStorage();

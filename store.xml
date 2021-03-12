@@ -2,15 +2,10 @@
 <ArrayOfAStore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <AStore xsi:type="CaliforniaStore">
     <Name>CPK</Name>
-    <_presetPizza>
+    <PresetPizza>
       <APizza xsi:type="CustomPizza">
-        <type>Meat Pizza</type>
-        <PizzaPrice>0</PizzaPrice>
+        <Type>Meat Pizza</Type>
         <Toppings>
-          <Topping>
-            <Name />
-            <Price>0</Price>
-          </Topping>
           <Topping>
             <Name>beef</Name>
             <Price>0.66</Price>
@@ -33,17 +28,13 @@
           </Topping>
         </Toppings>
         <Crust>
-          <Name>medium</Name>
-          <Price>3</Price>
+          <Name>regular</Name>
+          <Price>1.0</Price>
           <CheeseStuffed>false</CheeseStuffed>
           <StuffedPrice>1.50</StuffedPrice>
         </Crust>
-        <Size>
-          <Name>medium</Name>
-          <Price>3</Price>
-        </Size>
       </APizza>
-    </_presetPizza>
+    </PresetPizza>
     <ToppingsList>
       <Topping>
         <Name>beef</Name>
@@ -182,10 +173,6 @@
         <Name>large</Name>
         <Price>5.0</Price>
       </Size>
-      <Size>
-        <Name>extra large</Name>
-        <Price>6.0</Price>
-      </Size>
     </SizeList>
     <CrustList>
       <Crust>
@@ -254,20 +241,12 @@
     </ToppingsList>
     <SizeList>
       <Size>
-        <Name>small</Name>
-        <Price>3.0</Price>
-      </Size>
-      <Size>
         <Name>medium</Name>
         <Price>4.0</Price>
       </Size>
       <Size>
         <Name>large</Name>
         <Price>5.0</Price>
-      </Size>
-      <Size>
-        <Name>extra large</Name>
-        <Price>6.0</Price>
       </Size>
     </SizeList>
     <CrustList>
@@ -336,10 +315,6 @@
       </Topping>
     </ToppingsList>
     <SizeList>
-      <Size>
-        <Name>small</Name>
-        <Price>3.0</Price>
-      </Size>
       <Size>
         <Name>medium</Name>
         <Price>4.0</Price>
