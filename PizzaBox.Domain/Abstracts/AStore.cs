@@ -24,15 +24,38 @@ namespace PizzaBox.Domain.Abstracts
             
         }
 
+        public virtual decimal GetTotalSales(int LastNumDays)
+        {
+            decimal total = 0;
+            for(int i = 0; i < Orders.Count; i++)
+            {
+                if(DateTime.UtcNow.Subtract(Orders[i].OrderTime).TotalDays <= LastNumDays)
+                {
+                    total += Orders[i].CurTotal;
+                }
+            }
+
+            return total;
+            /*
+            for(int i = 0; i < Orders.Count; i++)
+            {
+                total += Orders[i].CurTotal;
+            }
+            return total;
+            */
+        }
+
         public virtual decimal GetTotalSales()
         {
             decimal total = 0;
+            
             for(int i = 0; i < Orders.Count; i++)
             {
                 total += Orders[i].CurTotal;
             }
             return total;
         }
+
         protected virtual void AddTopping(string type, decimal price)
         {
             ToppingsList.Add(new Topping(type, price));
@@ -53,6 +76,7 @@ namespace PizzaBox.Domain.Abstracts
         protected virtual void InitToppings(){}
         protected virtual void InitCrust(){}
         protected virtual void InitSize(){}
+        protected virtual void InitPresetPizza(){}
 
         public override string ToString()
         {

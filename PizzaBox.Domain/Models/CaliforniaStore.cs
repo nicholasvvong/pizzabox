@@ -48,8 +48,9 @@ namespace PizzaBox.Domain.Models
             AddCrust("thin", 1.0m);
         }
         
-        protected void InitPresetPizza()
+        protected override void InitPresetPizza()
         {
+            /*Meat*/
             CustomPizza tempP = new CustomPizza();
             tempP.Type = "Meat Pizza";
             tempP.AddCrust(CrustList[0]);
@@ -60,14 +61,15 @@ namespace PizzaBox.Domain.Models
             tempP.AddTopping(ToppingsList[8]);
             tempP.CalculatePrice();
             PresetPizza.Add(tempP);
-            /*
-                _presetMeat = new List<string>{
-                "pepperoni",
-                "ham",
-                "sauage",
-                "salami"
-            };
-            */
+            /*Hawaiian*/
+            tempP = new CustomPizza();
+            tempP.Type = "Hawaiian Pizza";
+            tempP.AddCrust(CrustList[0]);
+            tempP.AddTopping(ToppingsList[2]);
+            tempP.AddTopping(ToppingsList[5]);
+            tempP.AddTopping(ToppingsList[7]);
+            tempP.CalculatePrice();
+            PresetPizza.Add(tempP);
         }
         
     }

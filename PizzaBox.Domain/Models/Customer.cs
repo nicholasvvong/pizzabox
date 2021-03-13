@@ -8,14 +8,14 @@ namespace PizzaBox.Domain.Models
     {
         public string Name { get; set; }
         public string password { get; set; }
-        public int LastTimeOrdered { get; set; }
+        public DateTime LastTimeOrdered { get; set; }
         public AStore LastStore { get; set; }
         public List<Order> OrderHistory { get; set; }
         //public Order CurrentOrder { get; protected set; }
 
         public Customer()
         {
-            LastTimeOrdered = 0;
+            LastTimeOrdered = DateTime.MinValue;
             OrderHistory = new List<Order>();
         }
 
@@ -27,8 +27,15 @@ namespace PizzaBox.Domain.Models
 
         private bool CanOrder()
         {
-            //Do a time check
-            return true;
+
+            if(DateTime.UtcNow.Subtract(LastTimeOrdered).TotalHours > 2) //If it has been more than 2 hours since last order
+            {
+                return true;
+            }
+            else
+            { 
+                return false;
+            }
         }
 
         private bool CanChangeStore(AStore store)
@@ -40,8 +47,17 @@ namespace PizzaBox.Domain.Models
             }
             else
             {
-                if(LastStore.Name == store.Name)
-                    return false;
+                if(LastStore.Name != store.Name)
+                {
+                    if(DateTime.UtcNow.Subtract(LastTimeOrdered).TotalHours > 24) //If it has been 24 hours(1day) since last order
+                    {
+                        return true;
+                    }
+                    else
+                    { 
+                        return false;
+                    }
+                }
                 else
                     return true;
             }
@@ -49,23 +65,29 @@ namespace PizzaBox.Domain.Models
 
         public bool StartOrderCheck(AStore store)
         {
-            if(!CanOrder())
-            {
-                Console.WriteLine("Ordered in last 2 hours. Can't order again.");
-                return false;
-            }
             if(!CanChangeStore(store))
             {
                 Console.WriteLine("Ordered from another store in last 24 hours. Can't order again.");
                 return false;
             }
+            if(!CanOrder())
+            {
+                Console.WriteLine("Ordered in last 2 hours. Can't order again.");
+                return false;
+            }
             LastStore = store;
+            LastTimeOrdered = DateTime.UtcNow;
             return true;
         }
 
         public void AddToOrderHistory(Order o)
         {
             OrderHistory.Add(o);
+        }
+
+        public bool PasswordCheck(string checkPw)
+        {
+            return (password == checkPw);
         }
     }
 }

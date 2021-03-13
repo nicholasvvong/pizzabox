@@ -10,8 +10,10 @@ namespace PizzaBox.Domain.Models
         public int MaxPrice { get; set; }
         public int MaxPizzas { get; set; }
         public decimal CurTotal { get; set; }
+        public DateTime OrderTime { get; set; }
         public APizza CurrentPizza { get; set; }
         public List<APizza> Pizzas { get; set; }
+
 
         public Order()
         {
@@ -19,6 +21,7 @@ namespace PizzaBox.Domain.Models
             MaxPrice = 250;
             MaxPizzas = 50;
             CurTotal = 0;
+            OrderTime = DateTime.UtcNow;
         }
 
         public Order(Customer c) : this()

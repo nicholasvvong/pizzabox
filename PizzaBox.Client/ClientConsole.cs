@@ -19,6 +19,12 @@ namespace PizzaBox.Client
         /*
         -------------------------------------Print Methods----------------------------------------
         */
+
+        public void GenericPrint(string text)
+        {
+            Console.WriteLine(text);
+        }
+
         public void PrintInit()
         {
             maxMenuOptions = 2;
@@ -89,7 +95,7 @@ namespace PizzaBox.Client
         {
             maxMenuOptions = currentOrder.Pizzas.Count;
             PrintLine();
-            Console.WriteLine("Name: " + currentOrder.Name);
+            Console.WriteLine("Name: " + currentOrder.Name + " - " + currentOrder.OrderTime);
             for(int i = 0; i < currentOrder.Pizzas.Count; i++)
             {
                 Console.WriteLine("{0} : {1}", i + 1, currentOrder.Pizzas[i]);
@@ -146,7 +152,25 @@ namespace PizzaBox.Client
             Console.WriteLine("2. View Sales");
         }
 
+        public void PrintCustomersList(List<Customer> customers)
+        {
+            maxMenuOptions = customers.Count + 1;
+            PrintLine();
+            for(int i = 0; i < customers.Count; i++)
+            {
+                Console.WriteLine("{0}: {1}", i + 1, customers[i].Name);
+            }
+            Console.WriteLine("{0}: New Customer", customers.Count + 1);
+        }
 
+        public void PrintStoreSales(AStore store)
+        {
+            PrintLine();
+            Console.WriteLine("Last 7 days sales: " + store.GetTotalSales(7));
+            Console.WriteLine("Last 30 days sales: " + store.GetTotalSales(30));
+            Console.WriteLine("Last 90 days sales: " + store.GetTotalSales(90));
+            Console.WriteLine("Total sales: " + store.GetTotalSales());
+        }
 
 
         /*
@@ -172,7 +196,11 @@ namespace PizzaBox.Client
             return userIntInput;
         }
 
-
+        public string GetString(string output)
+        {
+            Console.Write(output);
+            return Console.ReadLine();
+        }
 
         /*
         -------------------------------------Input and Validation Methods----------------------------------------

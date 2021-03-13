@@ -3,303 +3,7 @@
   <Customer>
     <Name>Nick</Name>
     <password>Nick</password>
-    <LastTimeOrdered>0</LastTimeOrdered>
-    <LastStore xsi:type="CaliforniaStore">
-      <Name>CPK</Name>
-      <Orders>
-        <Order>
-          <MaxPrice>250</MaxPrice>
-          <MaxPizzas>50</MaxPizzas>
-          <CurTotal>17.59</CurTotal>
-          <Pizzas>
-            <APizza xsi:type="CustomPizza">
-              <Type>Meat Pizza</Type>
-              <MaxToppings>7</MaxToppings>
-              <Toppings>
-                <Topping>
-                  <Name>beef</Name>
-                  <Price>0.66</Price>
-                </Topping>
-                <Topping>
-                  <Name>chicken</Name>
-                  <Price>1.0</Price>
-                </Topping>
-                <Topping>
-                  <Name>ham</Name>
-                  <Price>0.75</Price>
-                </Topping>
-                <Topping>
-                  <Name>pepporoni</Name>
-                  <Price>0.75</Price>
-                </Topping>
-                <Topping>
-                  <Name>salami</Name>
-                  <Price>0.70</Price>
-                </Topping>
-              </Toppings>
-              <Crust>
-                <Name>regular</Name>
-                <Price>1.0</Price>
-                <CheeseStuffed>false</CheeseStuffed>
-                <StuffedPrice>1.50</StuffedPrice>
-              </Crust>
-              <Size>
-                <Name>large</Name>
-                <Price>5.0</Price>
-              </Size>
-            </APizza>
-            <APizza xsi:type="CustomPizza">
-              <Type>Custom Pizza</Type>
-              <MaxToppings>7</MaxToppings>
-              <Toppings>
-                <Topping>
-                  <Name>sauce</Name>
-                  <Price>0</Price>
-                </Topping>
-                <Topping>
-                  <Name>cheese</Name>
-                  <Price>0</Price>
-                </Topping>
-                <Topping>
-                  <Name>mushroom</Name>
-                  <Price>0.50</Price>
-                </Topping>
-                <Topping>
-                  <Name>olive</Name>
-                  <Price>0.33</Price>
-                </Topping>
-                <Topping>
-                  <Name>peppers</Name>
-                  <Price>0.40</Price>
-                </Topping>
-                <Topping>
-                  <Name>pineapple</Name>
-                  <Price>0.50</Price>
-                </Topping>
-              </Toppings>
-              <Crust>
-                <Name>regular</Name>
-                <Price>1.0</Price>
-                <CheeseStuffed>false</CheeseStuffed>
-                <StuffedPrice>1.50</StuffedPrice>
-              </Crust>
-              <Size>
-                <Name>large</Name>
-                <Price>5.0</Price>
-              </Size>
-            </APizza>
-          </Pizzas>
-        </Order>
-      </Orders>
-      <PresetPizza>
-        <APizza xsi:type="CustomPizza">
-          <Type>Meat Pizza</Type>
-          <MaxToppings>7</MaxToppings>
-          <Toppings>
-            <Topping>
-              <Name>beef</Name>
-              <Price>0.66</Price>
-            </Topping>
-            <Topping>
-              <Name>chicken</Name>
-              <Price>1.0</Price>
-            </Topping>
-            <Topping>
-              <Name>ham</Name>
-              <Price>0.75</Price>
-            </Topping>
-            <Topping>
-              <Name>pepporoni</Name>
-              <Price>0.75</Price>
-            </Topping>
-            <Topping>
-              <Name>salami</Name>
-              <Price>0.70</Price>
-            </Topping>
-          </Toppings>
-          <Crust>
-            <Name>regular</Name>
-            <Price>1.0</Price>
-            <CheeseStuffed>false</CheeseStuffed>
-            <StuffedPrice>1.50</StuffedPrice>
-          </Crust>
-          <Size>
-            <Name />
-            <Price>0</Price>
-          </Size>
-        </APizza>
-      </PresetPizza>
-      <ToppingsList>
-        <Topping>
-          <Name>beef</Name>
-          <Price>0.66</Price>
-        </Topping>
-        <Topping>
-          <Name>chicken</Name>
-          <Price>1.0</Price>
-        </Topping>
-        <Topping>
-          <Name>ham</Name>
-          <Price>0.75</Price>
-        </Topping>
-        <Topping>
-          <Name>mushroom</Name>
-          <Price>0.50</Price>
-        </Topping>
-        <Topping>
-          <Name>olive</Name>
-          <Price>0.33</Price>
-        </Topping>
-        <Topping>
-          <Name>peppers</Name>
-          <Price>0.40</Price>
-        </Topping>
-        <Topping>
-          <Name>pepporoni</Name>
-          <Price>0.75</Price>
-        </Topping>
-        <Topping>
-          <Name>pineapple</Name>
-          <Price>0.50</Price>
-        </Topping>
-        <Topping>
-          <Name>salami</Name>
-          <Price>0.70</Price>
-        </Topping>
-        <Topping>
-          <Name>sausage</Name>
-          <Price>0.80</Price>
-        </Topping>
-      </ToppingsList>
-      <SizeList>
-        <Size>
-          <Name>small</Name>
-          <Price>3.0</Price>
-        </Size>
-        <Size>
-          <Name>medium</Name>
-          <Price>4.0</Price>
-        </Size>
-        <Size>
-          <Name>large</Name>
-          <Price>5.0</Price>
-        </Size>
-        <Size>
-          <Name>extra large</Name>
-          <Price>6.0</Price>
-        </Size>
-      </SizeList>
-      <CrustList>
-        <Crust>
-          <Name>regular</Name>
-          <Price>1.0</Price>
-          <CheeseStuffed>false</CheeseStuffed>
-          <StuffedPrice>1.50</StuffedPrice>
-        </Crust>
-        <Crust>
-          <Name>hand-tossed</Name>
-          <Price>1.5</Price>
-          <CheeseStuffed>false</CheeseStuffed>
-          <StuffedPrice>1.50</StuffedPrice>
-        </Crust>
-        <Crust>
-          <Name>thin</Name>
-          <Price>1.0</Price>
-          <CheeseStuffed>false</CheeseStuffed>
-          <StuffedPrice>1.50</StuffedPrice>
-        </Crust>
-      </CrustList>
-    </LastStore>
-    <OrderHistory>
-      <Order>
-        <MaxPrice>250</MaxPrice>
-        <MaxPizzas>50</MaxPizzas>
-        <CurTotal>17.59</CurTotal>
-        <Pizzas>
-          <APizza xsi:type="CustomPizza">
-            <Type>Meat Pizza</Type>
-            <MaxToppings>7</MaxToppings>
-            <Toppings>
-              <Topping>
-                <Name>beef</Name>
-                <Price>0.66</Price>
-              </Topping>
-              <Topping>
-                <Name>chicken</Name>
-                <Price>1.0</Price>
-              </Topping>
-              <Topping>
-                <Name>ham</Name>
-                <Price>0.75</Price>
-              </Topping>
-              <Topping>
-                <Name>pepporoni</Name>
-                <Price>0.75</Price>
-              </Topping>
-              <Topping>
-                <Name>salami</Name>
-                <Price>0.70</Price>
-              </Topping>
-            </Toppings>
-            <Crust>
-              <Name>regular</Name>
-              <Price>1.0</Price>
-              <CheeseStuffed>false</CheeseStuffed>
-              <StuffedPrice>1.50</StuffedPrice>
-            </Crust>
-            <Size>
-              <Name>large</Name>
-              <Price>5.0</Price>
-            </Size>
-          </APizza>
-          <APizza xsi:type="CustomPizza">
-            <Type>Custom Pizza</Type>
-            <MaxToppings>7</MaxToppings>
-            <Toppings>
-              <Topping>
-                <Name>sauce</Name>
-                <Price>0</Price>
-              </Topping>
-              <Topping>
-                <Name>cheese</Name>
-                <Price>0</Price>
-              </Topping>
-              <Topping>
-                <Name>mushroom</Name>
-                <Price>0.50</Price>
-              </Topping>
-              <Topping>
-                <Name>olive</Name>
-                <Price>0.33</Price>
-              </Topping>
-              <Topping>
-                <Name>peppers</Name>
-                <Price>0.40</Price>
-              </Topping>
-              <Topping>
-                <Name>pineapple</Name>
-                <Price>0.50</Price>
-              </Topping>
-            </Toppings>
-            <Crust>
-              <Name>regular</Name>
-              <Price>1.0</Price>
-              <CheeseStuffed>false</CheeseStuffed>
-              <StuffedPrice>1.50</StuffedPrice>
-            </Crust>
-            <Size>
-              <Name>large</Name>
-              <Price>5.0</Price>
-            </Size>
-          </APizza>
-        </Pizzas>
-      </Order>
-    </OrderHistory>
-  </Customer>
-  <Customer>
-    <Name>Chris</Name>
-    <password>Chris</password>
-    <LastTimeOrdered>0</LastTimeOrdered>
+    <LastTimeOrdered>2021-03-13T22:55:17.8016821Z</LastTimeOrdered>
     <LastStore xsi:type="CaliforniaStore">
       <Name>CPK</Name>
       <Orders>
@@ -307,7 +11,8 @@
           <Name>Nick</Name>
           <MaxPrice>250</MaxPrice>
           <MaxPizzas>50</MaxPizzas>
-          <CurTotal>17.59</CurTotal>
+          <CurTotal>27.70</CurTotal>
+          <OrderTime>2021-03-13T22:55:17.8016821Z</OrderTime>
           <Pizzas>
             <APizza xsi:type="CustomPizza">
               <Type>Meat Pizza</Type>
@@ -346,24 +51,12 @@
               </Size>
             </APizza>
             <APizza xsi:type="CustomPizza">
-              <Type>Custom Pizza</Type>
+              <Type>Hawaiian Pizza</Type>
               <MaxToppings>7</MaxToppings>
               <Toppings>
                 <Topping>
-                  <Name>sauce</Name>
-                  <Price>0</Price>
-                </Topping>
-                <Topping>
-                  <Name>cheese</Name>
-                  <Price>0</Price>
-                </Topping>
-                <Topping>
-                  <Name>mushroom</Name>
-                  <Price>0.50</Price>
-                </Topping>
-                <Topping>
-                  <Name>olive</Name>
-                  <Price>0.33</Price>
+                  <Name>ham</Name>
+                  <Price>0.75</Price>
                 </Topping>
                 <Topping>
                   <Name>peppers</Name>
@@ -385,28 +78,29 @@
                 <Price>5.0</Price>
               </Size>
             </APizza>
-          </Pizzas>
-        </Order>
-        <Order>
-          <MaxPrice>250</MaxPrice>
-          <MaxPizzas>50</MaxPizzas>
-          <CurTotal>10.86</CurTotal>
-          <Pizzas>
             <APizza xsi:type="CustomPizza">
-              <Type>Meat Pizza</Type>
+              <Type>Custom Pizza</Type>
               <MaxToppings>7</MaxToppings>
               <Toppings>
+                <Topping>
+                  <Name>sauce</Name>
+                  <Price>0</Price>
+                </Topping>
+                <Topping>
+                  <Name>cheese</Name>
+                  <Price>0</Price>
+                </Topping>
                 <Topping>
                   <Name>beef</Name>
                   <Price>0.66</Price>
                 </Topping>
                 <Topping>
-                  <Name>chicken</Name>
-                  <Price>1.0</Price>
-                </Topping>
-                <Topping>
                   <Name>ham</Name>
                   <Price>0.75</Price>
+                </Topping>
+                <Topping>
+                  <Name>olive</Name>
+                  <Price>0.33</Price>
                 </Topping>
                 <Topping>
                   <Name>pepporoni</Name>
@@ -468,6 +162,34 @@
             <Price>0</Price>
           </Size>
         </APizza>
+        <APizza xsi:type="CustomPizza">
+          <Type>Hawaiian Pizza</Type>
+          <MaxToppings>7</MaxToppings>
+          <Toppings>
+            <Topping>
+              <Name>ham</Name>
+              <Price>0.75</Price>
+            </Topping>
+            <Topping>
+              <Name>peppers</Name>
+              <Price>0.40</Price>
+            </Topping>
+            <Topping>
+              <Name>pineapple</Name>
+              <Price>0.50</Price>
+            </Topping>
+          </Toppings>
+          <Crust>
+            <Name>regular</Name>
+            <Price>1.0</Price>
+            <CheeseStuffed>false</CheeseStuffed>
+            <StuffedPrice>1.50</StuffedPrice>
+          </Crust>
+          <Size>
+            <Name />
+            <Price>0</Price>
+          </Size>
+        </APizza>
       </PresetPizza>
       <ToppingsList>
         <Topping>
@@ -552,9 +274,11 @@
     </LastStore>
     <OrderHistory>
       <Order>
+        <Name>Nick</Name>
         <MaxPrice>250</MaxPrice>
         <MaxPizzas>50</MaxPizzas>
-        <CurTotal>10.86</CurTotal>
+        <CurTotal>27.70</CurTotal>
+        <OrderTime>0001-01-01T00:00:00</OrderTime>
         <Pizzas>
           <APizza xsi:type="CustomPizza">
             <Type>Meat Pizza</Type>
@@ -571,6 +295,78 @@
               <Topping>
                 <Name>ham</Name>
                 <Price>0.75</Price>
+              </Topping>
+              <Topping>
+                <Name>pepporoni</Name>
+                <Price>0.75</Price>
+              </Topping>
+              <Topping>
+                <Name>salami</Name>
+                <Price>0.70</Price>
+              </Topping>
+            </Toppings>
+            <Crust>
+              <Name>regular</Name>
+              <Price>1.0</Price>
+              <CheeseStuffed>false</CheeseStuffed>
+              <StuffedPrice>1.50</StuffedPrice>
+            </Crust>
+            <Size>
+              <Name>large</Name>
+              <Price>5.0</Price>
+            </Size>
+          </APizza>
+          <APizza xsi:type="CustomPizza">
+            <Type>Hawaiian Pizza</Type>
+            <MaxToppings>7</MaxToppings>
+            <Toppings>
+              <Topping>
+                <Name>ham</Name>
+                <Price>0.75</Price>
+              </Topping>
+              <Topping>
+                <Name>peppers</Name>
+                <Price>0.40</Price>
+              </Topping>
+              <Topping>
+                <Name>pineapple</Name>
+                <Price>0.50</Price>
+              </Topping>
+            </Toppings>
+            <Crust>
+              <Name>regular</Name>
+              <Price>1.0</Price>
+              <CheeseStuffed>false</CheeseStuffed>
+              <StuffedPrice>1.50</StuffedPrice>
+            </Crust>
+            <Size>
+              <Name>large</Name>
+              <Price>5.0</Price>
+            </Size>
+          </APizza>
+          <APizza xsi:type="CustomPizza">
+            <Type>Custom Pizza</Type>
+            <MaxToppings>7</MaxToppings>
+            <Toppings>
+              <Topping>
+                <Name>sauce</Name>
+                <Price>0</Price>
+              </Topping>
+              <Topping>
+                <Name>cheese</Name>
+                <Price>0</Price>
+              </Topping>
+              <Topping>
+                <Name>beef</Name>
+                <Price>0.66</Price>
+              </Topping>
+              <Topping>
+                <Name>ham</Name>
+                <Price>0.75</Price>
+              </Topping>
+              <Topping>
+                <Name>olive</Name>
+                <Price>0.33</Price>
               </Topping>
               <Topping>
                 <Name>pepporoni</Name>
@@ -597,9 +393,209 @@
     </OrderHistory>
   </Customer>
   <Customer>
+    <Name>Chris</Name>
+    <password>Chris</password>
+    <LastTimeOrdered>2021-03-13T23:00:40.4618645Z</LastTimeOrdered>
+    <LastStore xsi:type="FreddyStore">
+      <Name>Freddy's Pizza Store</Name>
+      <Orders>
+        <Order>
+          <Name>Chris</Name>
+          <MaxPrice>250</MaxPrice>
+          <MaxPizzas>50</MaxPizzas>
+          <CurTotal>9.83</CurTotal>
+          <OrderTime>2021-03-13T22:55:17.8016821Z</OrderTime>
+          <Pizzas>
+            <APizza xsi:type="CustomPizza">
+              <Type>Basic Veggie Pizza</Type>
+              <MaxToppings>7</MaxToppings>
+              <Toppings>
+                <Topping>
+                  <Name>mushroom</Name>
+                  <Price>1.00</Price>
+                </Topping>
+                <Topping>
+                  <Name>olive</Name>
+                  <Price>0.40</Price>
+                </Topping>
+                <Topping>
+                  <Name>onions</Name>
+                  <Price>0.33</Price>
+                </Topping>
+                <Topping>
+                  <Name>spinach</Name>
+                  <Price>0.60</Price>
+                </Topping>
+              </Toppings>
+              <Crust>
+                <Name>regular</Name>
+                <Price>1.5</Price>
+                <CheeseStuffed>false</CheeseStuffed>
+                <StuffedPrice>1.50</StuffedPrice>
+              </Crust>
+              <Size>
+                <Name>large</Name>
+                <Price>6.0</Price>
+              </Size>
+            </APizza>
+          </Pizzas>
+        </Order>
+      </Orders>
+      <PresetPizza>
+        <APizza xsi:type="CustomPizza">
+          <Type>Basic Veggie Pizza</Type>
+          <MaxToppings>7</MaxToppings>
+          <Toppings>
+            <Topping>
+              <Name>mushroom</Name>
+              <Price>1.00</Price>
+            </Topping>
+            <Topping>
+              <Name>olive</Name>
+              <Price>0.40</Price>
+            </Topping>
+            <Topping>
+              <Name>onions</Name>
+              <Price>0.33</Price>
+            </Topping>
+            <Topping>
+              <Name>spinach</Name>
+              <Price>0.60</Price>
+            </Topping>
+          </Toppings>
+          <Crust>
+            <Name>regular</Name>
+            <Price>1.5</Price>
+            <CheeseStuffed>false</CheeseStuffed>
+            <StuffedPrice>1.50</StuffedPrice>
+          </Crust>
+          <Size>
+            <Name />
+            <Price>0</Price>
+          </Size>
+        </APizza>
+      </PresetPizza>
+      <ToppingsList>
+        <Topping>
+          <Name>mushroom</Name>
+          <Price>1.00</Price>
+        </Topping>
+        <Topping>
+          <Name>olive</Name>
+          <Price>0.40</Price>
+        </Topping>
+        <Topping>
+          <Name>peppers</Name>
+          <Price>0.45</Price>
+        </Topping>
+        <Topping>
+          <Name>pineapple</Name>
+          <Price>0.75</Price>
+        </Topping>
+        <Topping>
+          <Name>onions</Name>
+          <Price>0.33</Price>
+        </Topping>
+        <Topping>
+          <Name>tomatoes</Name>
+          <Price>0.50</Price>
+        </Topping>
+        <Topping>
+          <Name>spinach</Name>
+          <Price>0.60</Price>
+        </Topping>
+      </ToppingsList>
+      <SizeList>
+        <Size>
+          <Name>medium</Name>
+          <Price>5.0</Price>
+        </Size>
+        <Size>
+          <Name>large</Name>
+          <Price>6.0</Price>
+        </Size>
+      </SizeList>
+      <CrustList>
+        <Crust>
+          <Name>regular</Name>
+          <Price>1.5</Price>
+          <CheeseStuffed>false</CheeseStuffed>
+          <StuffedPrice>1.50</StuffedPrice>
+        </Crust>
+        <Crust>
+          <Name>hand-tossed</Name>
+          <Price>2.0</Price>
+          <CheeseStuffed>false</CheeseStuffed>
+          <StuffedPrice>1.50</StuffedPrice>
+        </Crust>
+        <Crust>
+          <Name>thin</Name>
+          <Price>1.0</Price>
+          <CheeseStuffed>false</CheeseStuffed>
+          <StuffedPrice>1.50</StuffedPrice>
+        </Crust>
+      </CrustList>
+    </LastStore>
+    <OrderHistory>
+      <Order>
+        <Name>Chris</Name>
+        <MaxPrice>250</MaxPrice>
+        <MaxPizzas>50</MaxPizzas>
+        <CurTotal>9.83</CurTotal>
+        <OrderTime>2021-03-13T22:55:17.8016821Z</OrderTime>
+        <Pizzas>
+          <APizza xsi:type="CustomPizza">
+            <Type>Basic Veggie Pizza</Type>
+            <MaxToppings>7</MaxToppings>
+            <Toppings>
+              <Topping>
+                <Name>mushroom</Name>
+                <Price>1.00</Price>
+              </Topping>
+              <Topping>
+                <Name>olive</Name>
+                <Price>0.40</Price>
+              </Topping>
+              <Topping>
+                <Name>onions</Name>
+                <Price>0.33</Price>
+              </Topping>
+              <Topping>
+                <Name>spinach</Name>
+                <Price>0.60</Price>
+              </Topping>
+            </Toppings>
+            <Crust>
+              <Name>regular</Name>
+              <Price>1.5</Price>
+              <CheeseStuffed>false</CheeseStuffed>
+              <StuffedPrice>1.50</StuffedPrice>
+            </Crust>
+            <Size>
+              <Name>large</Name>
+              <Price>6.0</Price>
+            </Size>
+          </APizza>
+        </Pizzas>
+      </Order>
+    </OrderHistory>
+  </Customer>
+  <Customer>
     <Name>Bob</Name>
     <password>Bob</password>
-    <LastTimeOrdered>0</LastTimeOrdered>
+    <LastTimeOrdered>2021-03-12T22:50:49.1100275Z</LastTimeOrdered>
+    <OrderHistory />
+  </Customer>
+  <Customer>
+    <Name>Bill</Name>
+    <password>Bill</password>
+    <LastTimeOrdered>2021-03-12T22:50:49.1100277Z</LastTimeOrdered>
+    <OrderHistory />
+  </Customer>
+  <Customer>
+    <Name>Jack</Name>
+    <password>Jack</password>
+    <LastTimeOrdered>2021-03-13T23:14:07.2184343Z</LastTimeOrdered>
     <LastStore xsi:type="CaliforniaStore">
       <Name>CPK</Name>
       <Orders>
@@ -607,7 +603,8 @@
           <Name>Nick</Name>
           <MaxPrice>250</MaxPrice>
           <MaxPizzas>50</MaxPizzas>
-          <CurTotal>17.59</CurTotal>
+          <CurTotal>27.70</CurTotal>
+          <OrderTime>2021-03-13T22:55:17.8016821Z</OrderTime>
           <Pizzas>
             <APizza xsi:type="CustomPizza">
               <Type>Meat Pizza</Type>
@@ -646,24 +643,12 @@
               </Size>
             </APizza>
             <APizza xsi:type="CustomPizza">
-              <Type>Custom Pizza</Type>
+              <Type>Hawaiian Pizza</Type>
               <MaxToppings>7</MaxToppings>
               <Toppings>
                 <Topping>
-                  <Name>sauce</Name>
-                  <Price>0</Price>
-                </Topping>
-                <Topping>
-                  <Name>cheese</Name>
-                  <Price>0</Price>
-                </Topping>
-                <Topping>
-                  <Name>mushroom</Name>
-                  <Price>0.50</Price>
-                </Topping>
-                <Topping>
-                  <Name>olive</Name>
-                  <Price>0.33</Price>
+                  <Name>ham</Name>
+                  <Price>0.75</Price>
                 </Topping>
                 <Topping>
                   <Name>peppers</Name>
@@ -685,29 +670,29 @@
                 <Price>5.0</Price>
               </Size>
             </APizza>
-          </Pizzas>
-        </Order>
-        <Order>
-          <Name>Chris</Name>
-          <MaxPrice>250</MaxPrice>
-          <MaxPizzas>50</MaxPizzas>
-          <CurTotal>10.86</CurTotal>
-          <Pizzas>
             <APizza xsi:type="CustomPizza">
-              <Type>Meat Pizza</Type>
+              <Type>Custom Pizza</Type>
               <MaxToppings>7</MaxToppings>
               <Toppings>
+                <Topping>
+                  <Name>sauce</Name>
+                  <Price>0</Price>
+                </Topping>
+                <Topping>
+                  <Name>cheese</Name>
+                  <Price>0</Price>
+                </Topping>
                 <Topping>
                   <Name>beef</Name>
                   <Price>0.66</Price>
                 </Topping>
                 <Topping>
-                  <Name>chicken</Name>
-                  <Price>1.0</Price>
-                </Topping>
-                <Topping>
                   <Name>ham</Name>
                   <Price>0.75</Price>
+                </Topping>
+                <Topping>
+                  <Name>olive</Name>
+                  <Price>0.33</Price>
                 </Topping>
                 <Topping>
                   <Name>pepporoni</Name>
@@ -732,41 +717,38 @@
           </Pizzas>
         </Order>
         <Order>
-          <Name>Bob</Name>
+          <Name>Jack</Name>
           <MaxPrice>250</MaxPrice>
           <MaxPizzas>50</MaxPizzas>
-          <CurTotal>6.16</CurTotal>
+          <CurTotal>8.65</CurTotal>
+          <OrderTime>2021-03-13T23:14:07.218497Z</OrderTime>
           <Pizzas>
             <APizza xsi:type="CustomPizza">
-              <Type>Custom Pizza</Type>
+              <Type>Hawaiian Pizza</Type>
               <MaxToppings>7</MaxToppings>
               <Toppings>
                 <Topping>
-                  <Name>sauce</Name>
-                  <Price>0</Price>
+                  <Name>ham</Name>
+                  <Price>0.75</Price>
                 </Topping>
                 <Topping>
-                  <Name>cheese</Name>
-                  <Price>0</Price>
+                  <Name>peppers</Name>
+                  <Price>0.40</Price>
                 </Topping>
                 <Topping>
-                  <Name>beef</Name>
-                  <Price>0.66</Price>
-                </Topping>
-                <Topping>
-                  <Name>chicken</Name>
-                  <Price>1.0</Price>
+                  <Name>pineapple</Name>
+                  <Price>0.50</Price>
                 </Topping>
               </Toppings>
               <Crust>
-                <Name>hand-tossed</Name>
-                <Price>1.5</Price>
+                <Name>regular</Name>
+                <Price>1.0</Price>
                 <CheeseStuffed>false</CheeseStuffed>
                 <StuffedPrice>1.50</StuffedPrice>
               </Crust>
               <Size>
-                <Name>small</Name>
-                <Price>3.0</Price>
+                <Name>extra large</Name>
+                <Price>6.0</Price>
               </Size>
             </APizza>
           </Pizzas>
@@ -796,6 +778,34 @@
             <Topping>
               <Name>salami</Name>
               <Price>0.70</Price>
+            </Topping>
+          </Toppings>
+          <Crust>
+            <Name>regular</Name>
+            <Price>1.0</Price>
+            <CheeseStuffed>false</CheeseStuffed>
+            <StuffedPrice>1.50</StuffedPrice>
+          </Crust>
+          <Size>
+            <Name />
+            <Price>0</Price>
+          </Size>
+        </APizza>
+        <APizza xsi:type="CustomPizza">
+          <Type>Hawaiian Pizza</Type>
+          <MaxToppings>7</MaxToppings>
+          <Toppings>
+            <Topping>
+              <Name>ham</Name>
+              <Price>0.75</Price>
+            </Topping>
+            <Topping>
+              <Name>peppers</Name>
+              <Price>0.40</Price>
+            </Topping>
+            <Topping>
+              <Name>pineapple</Name>
+              <Price>0.50</Price>
             </Topping>
           </Toppings>
           <Crust>
@@ -893,41 +903,38 @@
     </LastStore>
     <OrderHistory>
       <Order>
-        <Name>Bob</Name>
+        <Name>Jack</Name>
         <MaxPrice>250</MaxPrice>
         <MaxPizzas>50</MaxPizzas>
-        <CurTotal>6.16</CurTotal>
+        <CurTotal>8.65</CurTotal>
+        <OrderTime>2021-03-13T23:14:07.218497Z</OrderTime>
         <Pizzas>
           <APizza xsi:type="CustomPizza">
-            <Type>Custom Pizza</Type>
+            <Type>Hawaiian Pizza</Type>
             <MaxToppings>7</MaxToppings>
             <Toppings>
               <Topping>
-                <Name>sauce</Name>
-                <Price>0</Price>
+                <Name>ham</Name>
+                <Price>0.75</Price>
               </Topping>
               <Topping>
-                <Name>cheese</Name>
-                <Price>0</Price>
+                <Name>peppers</Name>
+                <Price>0.40</Price>
               </Topping>
               <Topping>
-                <Name>beef</Name>
-                <Price>0.66</Price>
-              </Topping>
-              <Topping>
-                <Name>chicken</Name>
-                <Price>1.0</Price>
+                <Name>pineapple</Name>
+                <Price>0.50</Price>
               </Topping>
             </Toppings>
             <Crust>
-              <Name>hand-tossed</Name>
-              <Price>1.5</Price>
+              <Name>regular</Name>
+              <Price>1.0</Price>
               <CheeseStuffed>false</CheeseStuffed>
               <StuffedPrice>1.50</StuffedPrice>
             </Crust>
             <Size>
-              <Name>small</Name>
-              <Price>3.0</Price>
+              <Name>extra large</Name>
+              <Price>6.0</Price>
             </Size>
           </APizza>
         </Pizzas>
@@ -935,9 +942,419 @@
     </OrderHistory>
   </Customer>
   <Customer>
-    <Name>Bill</Name>
-    <password>Bill</password>
-    <LastTimeOrdered>0</LastTimeOrdered>
-    <OrderHistory />
+    <Name>Jill</Name>
+    <password>Jill</password>
+    <LastTimeOrdered>2021-03-13T23:15:13.3375939Z</LastTimeOrdered>
+    <LastStore xsi:type="NewYorkStore">
+      <Name>NewYork Pizza Store</Name>
+      <Orders>
+        <Order>
+          <Name>Jill</Name>
+          <MaxPrice>250</MaxPrice>
+          <MaxPizzas>50</MaxPizzas>
+          <CurTotal>29.55</CurTotal>
+          <OrderTime>2021-03-13T23:15:13.3376463Z</OrderTime>
+          <Pizzas>
+            <APizza xsi:type="CustomPizza">
+              <Type>Deluxe Pizza</Type>
+              <MaxToppings>7</MaxToppings>
+              <Toppings>
+                <Topping>
+                  <Name>pepporoni</Name>
+                  <Price>0.65</Price>
+                </Topping>
+                <Topping>
+                  <Name>sausage</Name>
+                  <Price>0.85</Price>
+                </Topping>
+                <Topping>
+                  <Name>mushroom</Name>
+                  <Price>0.40</Price>
+                </Topping>
+                <Topping>
+                  <Name>peppers</Name>
+                  <Price>0.35</Price>
+                </Topping>
+                <Topping>
+                  <Name>anchovies</Name>
+                  <Price>1.20</Price>
+                </Topping>
+              </Toppings>
+              <Crust>
+                <Name>regular</Name>
+                <Price>1.0</Price>
+                <CheeseStuffed>false</CheeseStuffed>
+                <StuffedPrice>1.50</StuffedPrice>
+              </Crust>
+              <Size>
+                <Name>extra large</Name>
+                <Price>6.5</Price>
+              </Size>
+            </APizza>
+            <APizza xsi:type="CustomPizza">
+              <Type>Hawaiian Pizza</Type>
+              <MaxToppings>7</MaxToppings>
+              <Toppings>
+                <Topping>
+                  <Name>ham</Name>
+                  <Price>0.75</Price>
+                </Topping>
+                <Topping>
+                  <Name>peppers</Name>
+                  <Price>0.35</Price>
+                </Topping>
+                <Topping>
+                  <Name>pineapple</Name>
+                  <Price>0.55</Price>
+                </Topping>
+              </Toppings>
+              <Crust>
+                <Name>regular</Name>
+                <Price>1.0</Price>
+                <CheeseStuffed>false</CheeseStuffed>
+                <StuffedPrice>1.50</StuffedPrice>
+              </Crust>
+              <Size>
+                <Name>large</Name>
+                <Price>5.5</Price>
+              </Size>
+            </APizza>
+            <APizza xsi:type="CustomPizza">
+              <Type>Meat Pizza</Type>
+              <MaxToppings>7</MaxToppings>
+              <Toppings>
+                <Topping>
+                  <Name>beef</Name>
+                  <Price>1.00</Price>
+                </Topping>
+                <Topping>
+                  <Name>chicken</Name>
+                  <Price>0.75</Price>
+                </Topping>
+                <Topping>
+                  <Name>ham</Name>
+                  <Price>0.75</Price>
+                </Topping>
+                <Topping>
+                  <Name>pepporoni</Name>
+                  <Price>0.65</Price>
+                </Topping>
+                <Topping>
+                  <Name>salami</Name>
+                  <Price>0.80</Price>
+                </Topping>
+              </Toppings>
+              <Crust>
+                <Name>regular</Name>
+                <Price>1.0</Price>
+                <CheeseStuffed>false</CheeseStuffed>
+                <StuffedPrice>1.50</StuffedPrice>
+              </Crust>
+              <Size>
+                <Name>large</Name>
+                <Price>5.5</Price>
+              </Size>
+            </APizza>
+          </Pizzas>
+        </Order>
+      </Orders>
+      <PresetPizza>
+        <APizza xsi:type="CustomPizza">
+          <Type>Meat Pizza</Type>
+          <MaxToppings>7</MaxToppings>
+          <Toppings>
+            <Topping>
+              <Name>beef</Name>
+              <Price>1.00</Price>
+            </Topping>
+            <Topping>
+              <Name>chicken</Name>
+              <Price>0.75</Price>
+            </Topping>
+            <Topping>
+              <Name>ham</Name>
+              <Price>0.75</Price>
+            </Topping>
+            <Topping>
+              <Name>pepporoni</Name>
+              <Price>0.65</Price>
+            </Topping>
+            <Topping>
+              <Name>salami</Name>
+              <Price>0.80</Price>
+            </Topping>
+          </Toppings>
+          <Crust>
+            <Name>regular</Name>
+            <Price>1.0</Price>
+            <CheeseStuffed>false</CheeseStuffed>
+            <StuffedPrice>1.50</StuffedPrice>
+          </Crust>
+          <Size>
+            <Name />
+            <Price>0</Price>
+          </Size>
+        </APizza>
+        <APizza xsi:type="CustomPizza">
+          <Type>Hawaiian Pizza</Type>
+          <MaxToppings>7</MaxToppings>
+          <Toppings>
+            <Topping>
+              <Name>ham</Name>
+              <Price>0.75</Price>
+            </Topping>
+            <Topping>
+              <Name>peppers</Name>
+              <Price>0.35</Price>
+            </Topping>
+            <Topping>
+              <Name>pineapple</Name>
+              <Price>0.55</Price>
+            </Topping>
+          </Toppings>
+          <Crust>
+            <Name>regular</Name>
+            <Price>1.0</Price>
+            <CheeseStuffed>false</CheeseStuffed>
+            <StuffedPrice>1.50</StuffedPrice>
+          </Crust>
+          <Size>
+            <Name />
+            <Price>0</Price>
+          </Size>
+        </APizza>
+        <APizza xsi:type="CustomPizza">
+          <Type>Deluxe Pizza</Type>
+          <MaxToppings>7</MaxToppings>
+          <Toppings>
+            <Topping>
+              <Name>pepporoni</Name>
+              <Price>0.65</Price>
+            </Topping>
+            <Topping>
+              <Name>sausage</Name>
+              <Price>0.85</Price>
+            </Topping>
+            <Topping>
+              <Name>mushroom</Name>
+              <Price>0.40</Price>
+            </Topping>
+            <Topping>
+              <Name>peppers</Name>
+              <Price>0.35</Price>
+            </Topping>
+            <Topping>
+              <Name>anchovies</Name>
+              <Price>1.20</Price>
+            </Topping>
+          </Toppings>
+          <Crust>
+            <Name>regular</Name>
+            <Price>1.0</Price>
+            <CheeseStuffed>false</CheeseStuffed>
+            <StuffedPrice>1.50</StuffedPrice>
+          </Crust>
+          <Size>
+            <Name />
+            <Price>0</Price>
+          </Size>
+        </APizza>
+      </PresetPizza>
+      <ToppingsList>
+        <Topping>
+          <Name>beef</Name>
+          <Price>1.00</Price>
+        </Topping>
+        <Topping>
+          <Name>chicken</Name>
+          <Price>0.75</Price>
+        </Topping>
+        <Topping>
+          <Name>ham</Name>
+          <Price>0.75</Price>
+        </Topping>
+        <Topping>
+          <Name>mushroom</Name>
+          <Price>0.40</Price>
+        </Topping>
+        <Topping>
+          <Name>olive</Name>
+          <Price>0.20</Price>
+        </Topping>
+        <Topping>
+          <Name>peppers</Name>
+          <Price>0.35</Price>
+        </Topping>
+        <Topping>
+          <Name>pepporoni</Name>
+          <Price>0.65</Price>
+        </Topping>
+        <Topping>
+          <Name>pineapple</Name>
+          <Price>0.55</Price>
+        </Topping>
+        <Topping>
+          <Name>salami</Name>
+          <Price>0.80</Price>
+        </Topping>
+        <Topping>
+          <Name>sausage</Name>
+          <Price>0.85</Price>
+        </Topping>
+        <Topping>
+          <Name>meat ball</Name>
+          <Price>1.00</Price>
+        </Topping>
+        <Topping>
+          <Name>anchovies</Name>
+          <Price>1.20</Price>
+        </Topping>
+      </ToppingsList>
+      <SizeList>
+        <Size>
+          <Name>medium</Name>
+          <Price>4.5</Price>
+        </Size>
+        <Size>
+          <Name>large</Name>
+          <Price>5.5</Price>
+        </Size>
+        <Size>
+          <Name>extra large</Name>
+          <Price>6.5</Price>
+        </Size>
+      </SizeList>
+      <CrustList>
+        <Crust>
+          <Name>regular</Name>
+          <Price>1.0</Price>
+          <CheeseStuffed>false</CheeseStuffed>
+          <StuffedPrice>1.50</StuffedPrice>
+        </Crust>
+        <Crust>
+          <Name>hand-tossed</Name>
+          <Price>1.0</Price>
+          <CheeseStuffed>false</CheeseStuffed>
+          <StuffedPrice>1.50</StuffedPrice>
+        </Crust>
+        <Crust>
+          <Name>thin</Name>
+          <Price>1.0</Price>
+          <CheeseStuffed>false</CheeseStuffed>
+          <StuffedPrice>1.50</StuffedPrice>
+        </Crust>
+      </CrustList>
+    </LastStore>
+    <OrderHistory>
+      <Order>
+        <Name>Jill</Name>
+        <MaxPrice>250</MaxPrice>
+        <MaxPizzas>50</MaxPizzas>
+        <CurTotal>29.55</CurTotal>
+        <OrderTime>2021-03-13T23:15:13.3376463Z</OrderTime>
+        <Pizzas>
+          <APizza xsi:type="CustomPizza">
+            <Type>Deluxe Pizza</Type>
+            <MaxToppings>7</MaxToppings>
+            <Toppings>
+              <Topping>
+                <Name>pepporoni</Name>
+                <Price>0.65</Price>
+              </Topping>
+              <Topping>
+                <Name>sausage</Name>
+                <Price>0.85</Price>
+              </Topping>
+              <Topping>
+                <Name>mushroom</Name>
+                <Price>0.40</Price>
+              </Topping>
+              <Topping>
+                <Name>peppers</Name>
+                <Price>0.35</Price>
+              </Topping>
+              <Topping>
+                <Name>anchovies</Name>
+                <Price>1.20</Price>
+              </Topping>
+            </Toppings>
+            <Crust>
+              <Name>regular</Name>
+              <Price>1.0</Price>
+              <CheeseStuffed>false</CheeseStuffed>
+              <StuffedPrice>1.50</StuffedPrice>
+            </Crust>
+            <Size>
+              <Name>extra large</Name>
+              <Price>6.5</Price>
+            </Size>
+          </APizza>
+          <APizza xsi:type="CustomPizza">
+            <Type>Hawaiian Pizza</Type>
+            <MaxToppings>7</MaxToppings>
+            <Toppings>
+              <Topping>
+                <Name>ham</Name>
+                <Price>0.75</Price>
+              </Topping>
+              <Topping>
+                <Name>peppers</Name>
+                <Price>0.35</Price>
+              </Topping>
+              <Topping>
+                <Name>pineapple</Name>
+                <Price>0.55</Price>
+              </Topping>
+            </Toppings>
+            <Crust>
+              <Name>regular</Name>
+              <Price>1.0</Price>
+              <CheeseStuffed>false</CheeseStuffed>
+              <StuffedPrice>1.50</StuffedPrice>
+            </Crust>
+            <Size>
+              <Name>large</Name>
+              <Price>5.5</Price>
+            </Size>
+          </APizza>
+          <APizza xsi:type="CustomPizza">
+            <Type>Meat Pizza</Type>
+            <MaxToppings>7</MaxToppings>
+            <Toppings>
+              <Topping>
+                <Name>beef</Name>
+                <Price>1.00</Price>
+              </Topping>
+              <Topping>
+                <Name>chicken</Name>
+                <Price>0.75</Price>
+              </Topping>
+              <Topping>
+                <Name>ham</Name>
+                <Price>0.75</Price>
+              </Topping>
+              <Topping>
+                <Name>pepporoni</Name>
+                <Price>0.65</Price>
+              </Topping>
+              <Topping>
+                <Name>salami</Name>
+                <Price>0.80</Price>
+              </Topping>
+            </Toppings>
+            <Crust>
+              <Name>regular</Name>
+              <Price>1.0</Price>
+              <CheeseStuffed>false</CheeseStuffed>
+              <StuffedPrice>1.50</StuffedPrice>
+            </Crust>
+            <Size>
+              <Name>large</Name>
+              <Price>5.5</Price>
+            </Size>
+          </APizza>
+        </Pizzas>
+      </Order>
+    </OrderHistory>
   </Customer>
 </ArrayOfCustomer>
