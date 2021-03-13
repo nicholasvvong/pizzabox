@@ -25,7 +25,7 @@ namespace PizzaBox.Domain.Singletons
 
         private StoreSingleton()
         {
-            var fs = new FileStorage();
+            var fs = new FileStorage(@"store.xml");
             
             //SeedStores();
             
@@ -36,10 +36,15 @@ namespace PizzaBox.Domain.Singletons
             
         }
 
+        public void UpdateStores()
+        {
+            var fs = new FileStorage(@"store.xml");
+            fs.WriteToXml<AStore>(Stores);
+        }
         
         private void SeedStores()
         {
-            var fs = new FileStorage();
+            var fs = new FileStorage(@"store.xml");
             Stores = new List<AStore>();
 
             Stores.Add(new CaliforniaStore());

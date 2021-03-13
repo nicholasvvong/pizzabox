@@ -13,12 +13,12 @@ namespace PizzaBox.Domain.Models
             ToppingsList = new List<Topping>();
             SizeList = new List<Size>();
             CrustList = new List<Crust>();
-            /*
-            InitToppings();
+            
+            /* InitToppings();
             InitSize();
             InitCrust();  
-            InitPresetPizza();
-            */
+            InitPresetPizza(); */
+            
         }
 
         protected override void InitToppings()

@@ -6,6 +6,7 @@ namespace PizzaBox.Domain.Models
 {
     public class Order
     {
+        public string Name { get; set; }
         public int MaxPrice { get; set; }
         public int MaxPizzas { get; set; }
         public decimal CurTotal { get; set; }
@@ -18,6 +19,11 @@ namespace PizzaBox.Domain.Models
             MaxPrice = 250;
             MaxPizzas = 50;
             CurTotal = 0;
+        }
+
+        public Order(Customer c) : this()
+        {
+            Name = c.Name;
         }
 
         private Order(int maxPrice, int maxPizzas) : this()
@@ -36,9 +42,10 @@ namespace PizzaBox.Domain.Models
             CurTotal += pizza.CalculatePrice();
         }
 
-        public void AddPresetPizza(APizza pizza)
+        public void StartPresetPizza(APizza pizza)
         {
-            AddPizza(pizza);
+            StartCustomPizza();
+            CurrentPizza.CopyPizza(pizza);
         }
         
         public void DeletePizza(int index)
@@ -58,15 +65,8 @@ namespace PizzaBox.Domain.Models
             return orderList;
         }
 
-        public void CreatePizza()
+        public void StartCustomPizza()
         {
-            /*
-            if(!isPizzaStarted())
-            {
-                Console.WriteLine("Have not started a pizza yet. Start a pizza for this order first.");
-                return;
-            }
-            */
             CurrentPizza = new CustomPizza();
         }
 

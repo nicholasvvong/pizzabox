@@ -6,7 +6,12 @@ namespace PizzaBox.Storing
 {
     public class FileStorage
     {
-        private readonly string _path = @"store.xml";
+        private readonly string _path;
+
+        public FileStorage(string path)
+        {
+            _path = path;
+        }
         public void WriteToXml<T>(List<T> data) where T : class
         {
             using (var writer = new StreamWriter(_path))

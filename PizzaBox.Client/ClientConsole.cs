@@ -19,6 +19,12 @@ namespace PizzaBox.Client
         /*
         -------------------------------------Print Methods----------------------------------------
         */
+        public void PrintInit()
+        {
+            maxMenuOptions = 2;
+            Console.WriteLine("1. Store");
+            Console.WriteLine("2. Customer");
+        }
 
         private void PrintInvalid()
         {
@@ -79,14 +85,16 @@ namespace PizzaBox.Client
             Console.WriteLine("4. Finish Order");
         }
 
-        public void PrintCurrentOrder(Customer c)
+        public void PrintCurrentOrder(Order currentOrder)
         {
+            maxMenuOptions = currentOrder.Pizzas.Count;
             PrintLine();
-            foreach(APizza p in c.CurrentOrder.Pizzas)
+            Console.WriteLine("Name: " + currentOrder.Name);
+            for(int i = 0; i < currentOrder.Pizzas.Count; i++)
             {
-                Console.WriteLine(p);
+                Console.WriteLine("{0} : {1}", i + 1, currentOrder.Pizzas[i]);
             }
-            Console.WriteLine("Current total: " + c.CurrentOrder.CurTotal);
+            Console.WriteLine("Total: " + currentOrder.CurTotal);
         }
 
         public void PrintCompInfo(List<APizzaComponent> comp)
@@ -129,6 +137,17 @@ namespace PizzaBox.Client
             }
             Console.WriteLine("{0} : Finish", store.ToppingsList.Count + 1);
         }
+
+        public void PrintStoreOptions()
+        {
+            maxMenuOptions = 2;
+            PrintLine();
+            Console.WriteLine("1. View all orders");
+            Console.WriteLine("2. View Sales");
+        }
+
+
+
 
         /*
         -------------------------------------Chooose Methods----------------------------------------

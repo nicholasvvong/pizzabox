@@ -24,18 +24,14 @@ namespace PizzaBox.Domain.Abstracts
             
         }
 
-        protected virtual void ViewOrders()
+        public virtual decimal GetTotalSales()
         {
+            decimal total = 0;
             for(int i = 0; i < Orders.Count; i++)
             {
-                Console.WriteLine("Order #{0}", i);
-                Console.WriteLine(Orders[i]);
-                Console.WriteLine("-------------------------");
+                total += Orders[i].CurTotal;
             }
-        }
-        protected virtual void ViewSales(string type)
-        {
-
+            return total;
         }
         protected virtual void AddTopping(string type, decimal price)
         {

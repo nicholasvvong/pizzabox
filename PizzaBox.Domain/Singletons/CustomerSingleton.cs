@@ -9,7 +9,7 @@ namespace PizzaBox.Domain.Singletons
     public class CustomerSingleton
     {
         private static CustomerSingleton _customerSingletone;
-        public List<AStore> Stores { get; set; }
+        public List<Customer> Customers { get; set; }
         public static CustomerSingleton Instance
         {
             get
@@ -25,25 +25,33 @@ namespace PizzaBox.Domain.Singletons
 
         private CustomerSingleton()
         {
-            var fs = new FileStorage();
+            var fs = new FileStorage(@"customer.xml");
             
-            if(Stores == null)
+            //SeedCustomers();
+
+            if(Customers == null)
             {
-                //Stores = fs.ReadFromXml<AStore>().ToList();
+                Customers = fs.ReadFromXml<Customer>().ToList();
             }
         }
 
-        private void SeedStores()
+        public void UpdateCustomers()
         {
-            var fs = new FileStorage();
-            Stores = new List<AStore>();
+            var fs = new FileStorage(@"customer.xml");
+            fs.WriteToXml<Customer>(Customers);
+        }
 
-            Stores.Add(new CaliforniaStore());
-            Stores.Add(new ChicagoStore());
-            Stores.Add(new FreddyStore());
-            Stores.Add(new NewYorkStore());
+        private void SeedCustomers()
+        {
+            var fs = new FileStorage(@"customer.xml");
+            Customers = new List<Customer>();
 
-            fs.WriteToXml<AStore>(Stores);
+            Customers.Add(new Customer("Nick"));
+            Customers.Add(new Customer("Chris"));
+            Customers.Add(new Customer("Bob"));
+            Customers.Add(new Customer("Bill"));
+
+            fs.WriteToXml<Customer>(Customers);
         }
     }
 }
