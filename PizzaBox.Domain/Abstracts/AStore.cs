@@ -56,6 +56,34 @@ namespace PizzaBox.Domain.Abstracts
             return total;
         }
 
+        public virtual Dictionary<string, int> GetPizzaCount(int numDays)
+        {
+            Dictionary<string, int> count = new Dictionary<string, int>();
+            for(int i = 0; i < PresetPizza.Count; i++)
+            {
+                count.Add(PresetPizza[i].Type, 0);
+            }
+
+            count.Add("Custom Pizza", 0);
+
+            for(int i = 0; i < Orders.Count; i++)
+            {
+                if(DateTime.UtcNow.Subtract(Orders[i].OrderTime).TotalDays <= numDays)
+                {
+                    for(int j = 0; j < Orders[i].Pizzas.Count; j++)
+                    {
+                        count[Orders[i].Pizzas[j].Type]++;
+                    }
+                }
+            }
+            
+            return count;
+        }
+        public virtual Dictionary<string, int> GetTotalPizzaCount()
+        {
+            return GetPizzaCount(Int32.MaxValue);
+        }
+
         protected virtual void AddTopping(string type, decimal price)
         {
             ToppingsList.Add(new Topping(type, price));

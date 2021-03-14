@@ -63,16 +63,22 @@ namespace PizzaBox.Domain.Models
             }
         }
 
+        private TimeSpan TimeRemaining(int hoursCheck)
+        {
+            TimeSpan temp = new TimeSpan(hoursCheck, 0, 0);
+            return temp.Subtract(DateTime.UtcNow.Subtract(LastTimeOrdered));
+        }
+
         public bool StartOrderCheck(AStore store)
         {
             if(!CanChangeStore(store))
             {
-                Console.WriteLine("Ordered from another store in last 24 hours. Can't order again.");
+                Console.WriteLine("Ordered from another store in last 24 hours. Can't order again. (Previous store: {0} - Time Remaining: {1})", LastStore, TimeRemaining(24));
                 return false;
             }
             if(!CanOrder())
             {
-                Console.WriteLine("Ordered in last 2 hours. Can't order again.");
+                Console.WriteLine("Ordered in last 2 hours. Can't order again. (Time Remaining: {0})", TimeRemaining(2));
                 return false;
             }
             LastStore = store;

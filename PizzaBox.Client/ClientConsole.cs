@@ -75,10 +75,11 @@ namespace PizzaBox.Client
 
         public void PrintMenu()
         {
-            maxMenuOptions = 2;
+            maxMenuOptions = 3;
             PrintLine();
             Console.WriteLine("1. View Order History");
             Console.WriteLine("2. Start New Order");
+            Console.WriteLine("3. Exit");
         }
 
         public void PrintOrderOptions()
@@ -95,7 +96,7 @@ namespace PizzaBox.Client
         {
             maxMenuOptions = currentOrder.Pizzas.Count;
             PrintLine();
-            Console.WriteLine("Name: " + currentOrder.Name + " - " + currentOrder.OrderTime);
+            Console.WriteLine("Name: " + currentOrder.Name + " - " + currentOrder.storeName + " - " + currentOrder.OrderTime);
             for(int i = 0; i < currentOrder.Pizzas.Count; i++)
             {
                 Console.WriteLine("{0} : {1}", i + 1, currentOrder.Pizzas[i]);
@@ -165,11 +166,45 @@ namespace PizzaBox.Client
 
         public void PrintStoreSales(AStore store)
         {
+            //Console.WriteLine("----------------------");
             PrintLine();
-            Console.WriteLine("Last 7 days sales: " + store.GetTotalSales(7));
-            Console.WriteLine("Last 30 days sales: " + store.GetTotalSales(30));
-            Console.WriteLine("Last 90 days sales: " + store.GetTotalSales(90));
-            Console.WriteLine("Total sales: " + store.GetTotalSales());
+            PrintStoreSalesDay(store, 7);
+            Console.WriteLine("----------------------");
+            PrintStoreSalesDay(store, 30);
+            Console.WriteLine("----------------------");
+            PrintStoreSalesDay(store, 90);
+            Console.WriteLine("----------------------");
+            PrintStoreTotalSales(store);
+        }
+
+        private void PrintStoreSalesDay(AStore store, int days)
+        {
+            Console.WriteLine("Last {0} days: ", days);
+            Dictionary<string, int> count = store.GetPizzaCount(days);
+            foreach(KeyValuePair<string, int> kvp in count)
+            {
+                Console.WriteLine("{0}: {1}", kvp.Key, kvp.Value);
+            }
+            Console.WriteLine("Last {0} days sales: " + store.GetTotalSales(days), days);
+        }
+
+        private void PrintStoreTotalSales(AStore store)
+        {
+            Console.WriteLine("Alltime: ");
+            Dictionary<string, int> count = store.GetTotalPizzaCount();
+            foreach(KeyValuePair<string, int> kvp in count)
+            {
+                Console.WriteLine("{0}: {1}", kvp.Key, kvp.Value);
+            }
+            Console.WriteLine("Total all time sales: " + store.GetTotalSales());
+        }
+
+        public void PrintStoreOrderOptions()
+        {
+            maxMenuOptions = 2;
+            PrintLine();
+            Console.WriteLine("1. View all store orders");
+            Console.WriteLine("2. Search order by name");
         }
 
 

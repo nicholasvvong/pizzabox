@@ -7,6 +7,7 @@ namespace PizzaBox.Domain.Models
     public class Order
     {
         public string Name { get; set; }
+        public string storeName { get; set; }
         public int MaxPrice { get; set; }
         public int MaxPizzas { get; set; }
         public decimal CurTotal { get; set; }
@@ -24,9 +25,10 @@ namespace PizzaBox.Domain.Models
             OrderTime = DateTime.UtcNow;
         }
 
-        public Order(Customer c) : this()
+        public Order(Customer c, AStore s) : this()
         {
             Name = c.Name;
+            storeName = s.Name;
         }
 
         private Order(int maxPrice, int maxPizzas) : this()

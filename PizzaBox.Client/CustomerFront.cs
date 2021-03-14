@@ -48,19 +48,26 @@ namespace PizzaBox.Client
         {
             int userMenuChoice = 0;
 
-            console.PrintMenu();
-            userMenuChoice = console.ChooseMenu();
-            switch(userMenuChoice)
+            do
             {
-                case 1:
-                    PrintOrderHistory(console);
-                    break;
-                case 2:
-                    StartOrder(console);
-                    break;
-                default:
-                    break;
-            }
+                console.PrintMenu();
+                userMenuChoice = console.ChooseMenu();
+                switch(userMenuChoice)
+                {
+                    case 1:
+                        PrintOrderHistory(console);
+                        break;
+                    case 2:
+                        StartOrder(console);
+                        userMenuChoice = 3;
+                        break;
+                    case 3:
+                        break;
+                    default:
+                        userMenuChoice = 3;
+                        break;
+                }
+            }while(userMenuChoice != 3);
         }
 
         private void PrintOrderHistory(ClientConsole console)
@@ -78,7 +85,7 @@ namespace PizzaBox.Client
 
             if(curCust.StartOrderCheck(clientStore))
             {
-                Order currentOrder = new Order(curCust);
+                Order currentOrder = new Order(curCust, clientStore);
                 do
                 {
                     console.PrintOrderOptions();
