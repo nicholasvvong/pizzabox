@@ -96,7 +96,7 @@ namespace PizzaBox.Client
         {
             maxMenuOptions = currentOrder.Pizzas.Count;
             PrintLine();
-            Console.WriteLine("Name: " + currentOrder.Name + " - " + currentOrder.storeName + " - " + currentOrder.OrderTime);
+            Console.WriteLine("Name: " + currentOrder.Name + " - " + currentOrder.StoreName + " - " + currentOrder.OrderTime);
             for(int i = 0; i < currentOrder.Pizzas.Count; i++)
             {
                 Console.WriteLine("{0} : {1}", i + 1, currentOrder.Pizzas[i]);

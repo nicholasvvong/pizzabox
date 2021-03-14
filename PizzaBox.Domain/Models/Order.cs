@@ -7,7 +7,7 @@ namespace PizzaBox.Domain.Models
     public class Order
     {
         public string Name { get; set; }
-        public string storeName { get; set; }
+        public string StoreName { get; set; }
         public int MaxPrice { get; set; }
         public int MaxPizzas { get; set; }
         public decimal CurTotal { get; set; }
@@ -28,13 +28,7 @@ namespace PizzaBox.Domain.Models
         public Order(Customer c, AStore s) : this()
         {
             Name = c.Name;
-            storeName = s.Name;
-        }
-
-        private Order(int maxPrice, int maxPizzas) : this()
-        {
-            MaxPrice = maxPrice;
-            MaxPizzas = maxPizzas;
+            StoreName = s.Name;
         }
 
         public void AddPizza(APizza pizza)
@@ -79,18 +73,6 @@ namespace PizzaBox.Domain.Models
         {
             AddPizza(CurrentPizza);
             CurrentPizza = null;
-        }
-
-        private bool isPizzaStarted()
-        {
-            if(CurrentPizza == null)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
         }
     }
 }
