@@ -110,8 +110,13 @@ namespace PizzaBox.Domain.Abstracts
             {
                 pizzaDesc += Type + " : ";
             }
-
+            
+            if(Crust.CheeseStuffed)
+            {
+                pizzaDesc += "(Cheese stuffed)";
+            }
             pizzaDesc += Crust.Name + " : ";
+            
             foreach(Topping t in Toppings)
             {
                 pizzaDesc += t.Name + " ";

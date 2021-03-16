@@ -3,7 +3,7 @@
   <Customer>
     <Name>Nick</Name>
     <password>Nick</password>
-    <LastTimeOrdered>2021-03-15T21:08:46.3440093Z</LastTimeOrdered>
+    <LastTimeOrdered>2021-03-16T18:32:50.7215173Z</LastTimeOrdered>
     <LastStore xsi:type="CaliforniaStore">
       <Name>CPK</Name>
       <Orders>
@@ -717,6 +717,60 @@
             </APizza>
           </Pizzas>
         </Order>
+        <Order>
+          <Name>Nick</Name>
+          <StoreName>CPK</StoreName>
+          <MaxPrice>250</MaxPrice>
+          <MaxPizzas>50</MaxPizzas>
+          <CurTotal>9.69</CurTotal>
+          <OrderTime>2021-03-16T18:32:50.7215776Z</OrderTime>
+          <Pizzas>
+            <APizza xsi:type="CustomPizza">
+              <Type>Custom Pizza</Type>
+              <MaxToppings>7</MaxToppings>
+              <Toppings>
+                <Topping>
+                  <Name>sauce</Name>
+                  <Price>0</Price>
+                </Topping>
+                <Topping>
+                  <Name>cheese</Name>
+                  <Price>0</Price>
+                </Topping>
+                <Topping>
+                  <Name>beef</Name>
+                  <Price>0.66</Price>
+                </Topping>
+                <Topping>
+                  <Name>ham</Name>
+                  <Price>0.75</Price>
+                </Topping>
+                <Topping>
+                  <Name>olive</Name>
+                  <Price>0.33</Price>
+                </Topping>
+                <Topping>
+                  <Name>pepporoni</Name>
+                  <Price>0.75</Price>
+                </Topping>
+                <Topping>
+                  <Name>salami</Name>
+                  <Price>0.70</Price>
+                </Topping>
+              </Toppings>
+              <Crust>
+                <Name>regular</Name>
+                <Price>1.0</Price>
+                <CheeseStuffed>true</CheeseStuffed>
+                <StuffedPrice>1.50</StuffedPrice>
+              </Crust>
+              <Size>
+                <Name>medium</Name>
+                <Price>4.0</Price>
+              </Size>
+            </APizza>
+          </Pizzas>
+        </Order>
       </Orders>
       <PresetPizza>
         <APizza xsi:type="CustomPizza">
@@ -848,7 +902,7 @@
         <Crust>
           <Name>regular</Name>
           <Price>1.0</Price>
-          <CheeseStuffed>false</CheeseStuffed>
+          <CheeseStuffed>true</CheeseStuffed>
           <StuffedPrice>1.50</StuffedPrice>
         </Crust>
         <Crust>
@@ -1336,6 +1390,60 @@
             <Size>
               <Name>large</Name>
               <Price>5.0</Price>
+            </Size>
+          </APizza>
+        </Pizzas>
+      </Order>
+      <Order>
+        <Name>Nick</Name>
+        <StoreName>CPK</StoreName>
+        <MaxPrice>250</MaxPrice>
+        <MaxPizzas>50</MaxPizzas>
+        <CurTotal>9.69</CurTotal>
+        <OrderTime>2021-03-16T18:32:50.7215776Z</OrderTime>
+        <Pizzas>
+          <APizza xsi:type="CustomPizza">
+            <Type>Custom Pizza</Type>
+            <MaxToppings>7</MaxToppings>
+            <Toppings>
+              <Topping>
+                <Name>sauce</Name>
+                <Price>0</Price>
+              </Topping>
+              <Topping>
+                <Name>cheese</Name>
+                <Price>0</Price>
+              </Topping>
+              <Topping>
+                <Name>beef</Name>
+                <Price>0.66</Price>
+              </Topping>
+              <Topping>
+                <Name>ham</Name>
+                <Price>0.75</Price>
+              </Topping>
+              <Topping>
+                <Name>olive</Name>
+                <Price>0.33</Price>
+              </Topping>
+              <Topping>
+                <Name>pepporoni</Name>
+                <Price>0.75</Price>
+              </Topping>
+              <Topping>
+                <Name>salami</Name>
+                <Price>0.70</Price>
+              </Topping>
+            </Toppings>
+            <Crust>
+              <Name>regular</Name>
+              <Price>1.0</Price>
+              <CheeseStuffed>true</CheeseStuffed>
+              <StuffedPrice>1.50</StuffedPrice>
+            </Crust>
+            <Size>
+              <Name>medium</Name>
+              <Price>4.0</Price>
             </Size>
           </APizza>
         </Pizzas>

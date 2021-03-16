@@ -23,7 +23,7 @@ namespace PizzaBox.Domain.Abstracts
             Price = p;
         }
 
-        protected void ChangeStuffedCrust()
+        public void ChangeStuffedCrust()
         {
             if(CheeseStuffed)
                 CheeseStuffed = false;

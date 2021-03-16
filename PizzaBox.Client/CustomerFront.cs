@@ -134,7 +134,9 @@ namespace PizzaBox.Client
                 o.CurrentPizza.AddSize(store.SizeList[client.ChooseMenu() - 1]);
                 client.PrintCrusts(store);
                 o.CurrentPizza.AddCrust(store.CrustList[client.ChooseMenu() - 1]);
-                
+                string yesno = client.GetString("Do you want stuffed crust (y/n)?: ");
+                if(yesno.ToLower() == "y")
+                    o.CurrentPizza.Crust.ChangeStuffedCrust();
                 do
                 {
                     client.PrintToppings(store);
